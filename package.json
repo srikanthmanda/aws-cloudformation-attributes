@@ -1,0 +1,28 @@
+{
+  "name": "aws-cloudformation-attributes",
+  "version": "0.0.1",
+  "description": "An application to generate a cheatsheet of attributes returned by Ref and Fn::GetAtt intrinsic functions for AWS CloudFormation resources.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/srikanthmanda/aws-cloudformation-attributes.git"
+  },
+  "keywords": [
+    "aws",
+    "cloudformation",
+    "cheatsheet"
+  ],
+  "author": "srikanthmanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srikanthmanda/aws-cloudformation-attributes/issues"
+  },
+  "homepage": "https://github.com/srikanthmanda/aws-cloudformation-attributes#readme",
+  "dependencies": {
+    "@octokit/request": "^5.4.7",
+    "archiver": "^5.0.0"
+  }
+}
