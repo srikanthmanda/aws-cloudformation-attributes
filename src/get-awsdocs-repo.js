@@ -11,9 +11,10 @@ async function getRepoArchive() {
       ref: "master",
     }
   );
-  console.log("repoArchiveURL: " + JSON.stringify(repoArchive));
+  console.debug("repoArchiveURL: " + JSON.stringify(repoArchive));
 
-  // TODO: Save the response data to a zip file
+  const repoZip = fs.createWriteStream("aws-cloudformation-user-guide.zip");
+  repoZip.write(Buffer.from(repoArchive.data));
 }
 
 getRepoArchive();

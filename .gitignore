@@ -1,8 +1,6 @@
 # Source archives
-awsdocs-aws-cloudformation-user-guide-*.zip
 awsdocs-aws-cloudformation-user-guide-*
-aws-cloudformation-user-guide-master.zip
-aws-cloudformation-user-guide-master
+aws-cloudformation-user-guide*
 
 # Tools
 .vscode
