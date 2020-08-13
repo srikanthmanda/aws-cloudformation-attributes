@@ -23,6 +23,6 @@
   "homepage": "https://github.com/srikanthmanda/aws-cloudformation-attributes#readme",
   "dependencies": {
     "@octokit/request": "^5.4.7",
-    "archiver": "^5.0.0"
+    "yauzl": "^2.10.0"
   }
 }

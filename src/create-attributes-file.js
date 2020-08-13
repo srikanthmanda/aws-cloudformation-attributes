@@ -10,7 +10,8 @@ async function createAttributesFile(input) {
   const LINE_FILTER_REGEX = "For more information about using the ";
   const NAME_ANCHOR_REGEX = /<a name="[\w+:-]*"><\/a>$/;
 
-  const output = fs.createWriteStream(input.replace(/\.md$/, "_attributes.md"));
+  const output = input.replace(/\.md$/, "_attributes.md");
+  const attributesFile = fs.createWriteStream(output);
 
   const rl = readline.createInterface({
     input: fs.createReadStream(input),
@@ -19,26 +20,32 @@ async function createAttributesFile(input) {
 
   console.log("Input: " + input);
 
-  var inReturnValuesSection = false;
-  var linesProcessed = 0;
+  let inReturnValuesSection = false;
+  let linesProcessed = 0;
+  let entity;
 
   for await (const line of rl) {
     linesProcessed++;
     if (!inReturnValuesSection && line.startsWith(PAGE_START)) {
-      output.write(line.split("<", 1)[0] + "\n");
+      entity = line.split("<", 1)[0];
     } else if (line.startsWith(RETURN_VALUES_SECTION_START)) {
       console.debug("Return values section is at line " + linesProcessed);
       inReturnValuesSection = true;
+      attributesFile.write(entity + "\n");
     } else if (inReturnValuesSection && line.startsWith(SECTION_START)) {
-      output.end();
+      attributesFile.end();
       console.debug("Lines processed: " + linesProcessed);
-      return;
+      // Return at the end of Return Values section
+      return true;
     } else if (inReturnValuesSection && !line.startsWith(LINE_FILTER_REGEX)) {
-      output.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
+      attributesFile.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
     }
   }
+
+  // Delete the attributes file if the entity has no return values
+  // If the input has Return Values, this function returns at that section end
+  fs.unlink(output);
 }
 
-// createAttributesFile("../test/data/aws-properties-ec2-instance.md");
-
-export { createAttributesFile };
+createAttributesFile("test/data/aws-properties-ec2-instance.md");
+// export { createAttributesFile };
