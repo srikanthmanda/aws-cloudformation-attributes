@@ -2,7 +2,8 @@
 *awsdocs-aws-cloudformation-user-guide*
 *aws-cloudformation-user-guide*
 data/*
-test/data/*attributes.md
+test
+output
 
 # Tools
 .vscode

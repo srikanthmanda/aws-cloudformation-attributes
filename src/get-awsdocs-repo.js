@@ -17,4 +17,5 @@ async function getRepoArchive() {
   repoZip.write(Buffer.from(repoArchive.data));
 }
 
-getRepoArchive();
+// getRepoArchive();
+exports.getRepoArchive = getRepoArchive;

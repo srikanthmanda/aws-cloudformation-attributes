@@ -1,16 +1,19 @@
 const fs = require("fs");
 const readline = require("readline");
 
-async function createAttributesFile(input) {
+async function createAttributesFile(input, outputDir, indexFile) {
   const PAGE_START = "# ";
   const SECTION_START = "## ";
   // const RETURN_VALUES_SECTION_START = SECTION_START + "Return Values";
   const RETURN_VALUES_SECTION_START = "## Return values";
 
-  const LINE_FILTER_REGEX = "For more information about using the ";
+  const LINE_FILTER_PATTERN = "For more information about using the ";
   const NAME_ANCHOR_REGEX = /<a name="[\w+:-]*"><\/a>$/;
 
-  const output = input.replace(/\.md$/, "_attributes.md");
+  const output =
+    outputDir +
+    "/" +
+    input.split("/").reverse()[0].replace(/\.md$/, "_attributes.md");
   const attributesFile = fs.createWriteStream(output);
 
   const rl = readline.createInterface({
@@ -18,34 +21,91 @@ async function createAttributesFile(input) {
     crlfDelay: Infinity,
   });
 
-  console.log("Input: " + input);
+  console.info("Input: " + input);
 
   let inReturnValuesSection = false;
-  let linesProcessed = 0;
+  let hasReturnValues = false;
+  let linesRead = 0;
   let entity;
 
   for await (const line of rl) {
-    linesProcessed++;
+    linesRead++;
     if (!inReturnValuesSection && line.startsWith(PAGE_START)) {
       entity = line.split("<", 1)[0];
     } else if (line.startsWith(RETURN_VALUES_SECTION_START)) {
-      console.debug("Return values section is at line " + linesProcessed);
       inReturnValuesSection = true;
+      hasReturnValues = true;
       attributesFile.write(entity + "\n");
+      console.debug(
+        "Return Values section of " + input + " is at line " + linesRead
+      );
     } else if (inReturnValuesSection && line.startsWith(SECTION_START)) {
-      attributesFile.end();
-      console.debug("Lines processed: " + linesProcessed);
-      // Return at the end of Return Values section
-      return true;
-    } else if (inReturnValuesSection && !line.startsWith(LINE_FILTER_REGEX)) {
+      break;
+    } else if (inReturnValuesSection && !line.startsWith(LINE_FILTER_PATTERN)) {
       attributesFile.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
     }
   }
 
-  // Delete the attributes file if the entity has no return values
-  // If the input has Return Values, this function returns at that section end
-  fs.unlink(output);
+  attributesFile.end();
+
+  if (hasReturnValues) {
+    fs.appendFile(indexFile, entity + "," + output + "\n", (error) => {
+      if (error) throw error;
+      console.debug("Index updated for " + input);
+    });
+    console.debug("Lines read in " + input + ": " + linesRead);
+  } else {
+    fs.unlink(output, (error) => {
+      if (error) {
+        console.error("Failed to delete empty output: " + output);
+        console.error("Error: " + JSON.stringify(error));
+      } else {
+        console.debug("Deleted empty output: " + output);
+      }
+    });
+  }
 }
 
-createAttributesFile("test/data/aws-properties-ec2-instance.md");
-// export { createAttributesFile };
+async function createAttributeFiles(inputDir, outputDir) {
+  const INDEX_FILE = "aws_cloudformation_attributes_index.csv";
+  const indexFile = outputDir + "/" + INDEX_FILE;
+  const RESOURCE_FILE_NAME_REGEX = /^aws-resource-.*\.md$/;
+  const PROPERTIES_FILE_NAME_REGEX = /^aws-properties-.*\.md$/;
+
+  let docFiles;
+
+  try {
+    docFiles = fs
+      .readdirSync(inputDir)
+      .filter(
+        (file) =>
+          RESOURCE_FILE_NAME_REGEX.test(file) ||
+          PROPERTIES_FILE_NAME_REGEX.test(file)
+      );
+  } catch (error) {
+    console.error("Failed to read directory: " + inputDir);
+    throw error;
+  }
+
+  console.debug("Entity files found: " + docFiles.length);
+
+  if (fs.existsSync(indexFile)) fs.unlinkSync(indexFile);
+
+  await Promise.all(
+    docFiles.map(async (docFile) => {
+      try {
+        await createAttributesFile(
+          inputDir + "/" + docFile,
+          outputDir,
+          indexFile
+        );
+      } catch (error) {
+        console.error("Error processing " + docFile);
+        throw error;
+      }
+    })
+  );
+}
+
+// createAttributeFiles("data", "output");
+exports.createAttributeFiles = createAttributeFiles;
