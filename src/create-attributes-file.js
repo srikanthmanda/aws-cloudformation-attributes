@@ -1,69 +1,73 @@
 const fs = require("fs");
 const readline = require("readline");
 
-async function createAttributesFile(input, outputDir, indexFile) {
-  const PAGE_START = "# ";
-  const SECTION_START = "## ";
-  // const RETURN_VALUES_SECTION_START = SECTION_START + "Return Values";
-  const RETURN_VALUES_SECTION_START = "## Return values";
+function createAttributesFile(input, outputDir, indexFile) {
+  return new Promise(async (resolve) => {
+    const PAGE_START = "# ";
+    const SECTION_START = "## ";
+    // const RETURN_VALUES_SECTION_START = SECTION_START + "Return Values";
+    const RETURN_VALUES_SECTION_START = "## Return values";
 
-  const LINE_FILTER_PATTERN = "For more information about using the ";
-  const NAME_ANCHOR_REGEX = /<a name="[\w+:-]*"><\/a>$/;
+    const LINE_FILTER_PATTERN = "For more information about using the ";
+    const NAME_ANCHOR_REGEX = /<a name="[\w+:-]*"><\/a>$/;
 
-  const output =
-    outputDir +
-    "/" +
-    input.split("/").reverse()[0].replace(/\.md$/, "_attributes.md");
-  const attributesFile = fs.createWriteStream(output);
+    const output =
+      outputDir +
+      "/" +
+      input.split("/").reverse()[0].replace(/\.md$/, "_attributes.md");
+    const attributesFile = fs.createWriteStream(output);
 
-  const rl = readline.createInterface({
-    input: fs.createReadStream(input),
-    crlfDelay: Infinity,
-  });
-
-  console.info("Input: " + input);
-
-  let inReturnValuesSection = false;
-  let hasReturnValues = false;
-  let linesRead = 0;
-  let entity;
-
-  for await (const line of rl) {
-    linesRead++;
-    if (!inReturnValuesSection && line.startsWith(PAGE_START)) {
-      entity = line.split("<", 1)[0];
-    } else if (line.startsWith(RETURN_VALUES_SECTION_START)) {
-      inReturnValuesSection = true;
-      hasReturnValues = true;
-      attributesFile.write(entity + "\n");
-      console.debug(
-        "Return Values section of " + input + " is at line " + linesRead
-      );
-    } else if (inReturnValuesSection && line.startsWith(SECTION_START)) {
-      break;
-    } else if (inReturnValuesSection && !line.startsWith(LINE_FILTER_PATTERN)) {
-      attributesFile.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
-    }
-  }
-
-  attributesFile.end();
-
-  if (hasReturnValues) {
-    fs.appendFile(indexFile, entity + "," + output + "\n", (error) => {
-      if (error) throw error;
-      console.debug("Index updated for " + input);
+    const rl = readline.createInterface({
+      input: fs.createReadStream(input),
+      crlfDelay: Infinity,
     });
-    console.debug("Lines read in " + input + ": " + linesRead);
-  } else {
-    fs.unlink(output, (error) => {
-      if (error) {
-        console.error("Failed to delete empty output: " + output);
-        console.error("Error: " + JSON.stringify(error));
-      } else {
-        console.debug("Deleted empty output: " + output);
+
+    console.info("Input: " + input);
+
+    let inReturnValuesSection = false;
+    let hasReturnValues = false;
+    let linesRead = 0;
+    let entity;
+
+    for await (const line of rl) {
+      linesRead++;
+      if (!inReturnValuesSection && line.startsWith(PAGE_START)) {
+        entity = line.split("<", 1)[0];
+      } else if (line.startsWith(RETURN_VALUES_SECTION_START)) {
+        inReturnValuesSection = true;
+        hasReturnValues = true;
+        attributesFile.write(entity + "\n");
+        console.debug(
+          "Return Values section of " + input + " is at line " + linesRead
+        );
+      } else if (inReturnValuesSection && line.startsWith(SECTION_START)) {
+        break;
+      } else if (
+        inReturnValuesSection &&
+        !line.startsWith(LINE_FILTER_PATTERN)
+      ) {
+        attributesFile.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
       }
-    });
-  }
+    }
+
+    attributesFile.end();
+
+    if (hasReturnValues) {
+      fs.appendFileSync(indexFile, entity + "," + output + "\n");
+      console.debug("Index updated for " + input);
+      console.debug("Lines read in " + input + ": " + linesRead);
+    } else {
+      fs.unlink(output, (error) => {
+        if (error) {
+          console.error("Failed to delete empty output: " + output);
+          console.error("Error: " + JSON.stringify(error));
+        } else {
+          console.debug("Deleted empty output: " + output);
+        }
+      });
+    }
+    resolve();
+  });
 }
 
 async function createAttributeFiles(inputDir, outputDir) {
@@ -107,5 +111,7 @@ async function createAttributeFiles(inputDir, outputDir) {
   );
 }
 
-// createAttributeFiles("data", "output");
+// createAttributeFiles("data", "output").then(() =>
+//   console.log("Attribute files created")
+// );
 exports.createAttributeFiles = createAttributeFiles;
