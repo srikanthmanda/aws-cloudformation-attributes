@@ -34,7 +34,7 @@ async function main() {
   try {
     await ccs.createCheatsheet(
       "output/aws_cloudformation_attributes_index.csv",
-      "aws-cloudformation-attributes.md"
+      "docs/aws-cloudformation-attributes.md"
     );
     console.log("Cheatsheet created.");
   } catch (error) {

@@ -7168,7 +7168,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
-Example: `mystack-mybucket-kdwwxmddtr2g` 
+Example: `mystack-mybucket` 
 
 
 ### Fn::GetAtt
@@ -7184,21 +7184,22 @@ Example: `arn:aws:s3:::mybucket`
 
 `DomainName`  
 Returns the IPv4 DNS name of the specified bucket\.  
-Example: `mystack-mybucket-kdwwxmddtr2g.s3.amazonaws.com` 
+Example: `mystack-mybucket.s3.amazonaws.com` 
 
 `DualStackDomainName`  
 Returns the IPv6 DNS name of the specified bucket\.  
-Example: ` mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com`   
+Example: ` mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com`   
 For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html)\.
 
 `RegionalDomainName`  
 Returns the regional domain name of the specified bucket\.  
-Example: `mystack-mybucket-kdwwxmddtr2g.s3.us-east-2.amazonaws.com` 
+Example: `mystack-mybucket.s3.us-east-2.amazonaws.com` 
 
 `WebsiteURL`  
 Returns the Amazon S3 website endpoint for the specified bucket\.  
-Example \(IPv4\): `http://mystack-mybucket-kdwwxmddtr2g.s3-website.us-east-2.amazonaws.com`   
-Example \(IPv6\): `http://mystack-mybucket-kdwwxmddtr2g.s3.dualstack.us-east-2.amazonaws.com` 
+
+Example \(IPv4\): `http://mystack-mybucket.s3-website-us-east-2.amazonaws.com/`   
+Example \(IPv6\): `http://mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com/` 
 
 
 ## AWS::SDB::Domain
