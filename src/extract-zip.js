@@ -6,45 +6,51 @@ const yauzl = require("yauzl");
 const fs = require("fs");
 
 function extractEntityFiles(repoArchive, dataDir) {
-  const RESOURCE_FILE_NAME_REGEX = /^aws-resource-.*\.md$/;
-  const PROPERTIES_FILE_NAME_REGEX = /^aws-properties-.*\.md$/;
+  return new Promise((resolve, reject) => {
+    const RESOURCE_FILE_NAME_REGEX = /^aws-resource-.*\.md$/;
+    const PROPERTIES_FILE_NAME_REGEX = /^aws-properties-.*\.md$/;
 
-  yauzl.open(repoArchive, { lazyEntries: true }, function (err, repoZip) {
-    if (err) throw err;
-    let numOfEntityFiles = 0;
-    repoZip.readEntry();
-    repoZip.on("entry", function (entry) {
-      if (/\/$/.test(entry.fileName)) {
-        // Diretory entry
-        console.log("Directory: " + entry.fileName);
-        repoZip.readEntry();
-      } else {
-        // File entry
-        fileEntry = entry.fileName.split("/").reverse()[0];
-        // Extract only resource and properties files
-        if (
-          RESOURCE_FILE_NAME_REGEX.test(fileEntry) ||
-          PROPERTIES_FILE_NAME_REGEX.test(fileEntry)
-        ) {
-          numOfEntityFiles++;
-          unzippedFile = fs.createWriteStream(dataDir + "/" + fileEntry);
-          repoZip.openReadStream(entry, function (err, readStream) {
-            if (err) throw err;
-            readStream.on("end", function () {
-              repoZip.readEntry();
-            });
-            readStream.pipe(unzippedFile);
-          });
-        } else {
+    yauzl.open(repoArchive, { lazyEntries: true }, function (err, repoZip) {
+      if (err) reject(err);
+      let numOfEntityFiles = 0;
+      repoZip.readEntry();
+      repoZip.on("entry", function (entry) {
+        if (/\/$/.test(entry.fileName)) {
+          // Diretory entry
+          console.log("Directory: " + entry.fileName);
           repoZip.readEntry();
+        } else {
+          // File entry
+          fileEntry = entry.fileName.split("/").reverse()[0];
+          // Extract only resource and properties files
+          if (
+            RESOURCE_FILE_NAME_REGEX.test(fileEntry) ||
+            PROPERTIES_FILE_NAME_REGEX.test(fileEntry)
+          ) {
+            numOfEntityFiles++;
+            unzippedFile = fs.createWriteStream(dataDir + "/" + fileEntry);
+            repoZip.openReadStream(entry, function (err, readStream) {
+              if (err) throw err;
+              readStream.on("end", function () {
+                repoZip.readEntry();
+              });
+              readStream.pipe(unzippedFile);
+            });
+          } else {
+            repoZip.readEntry();
+          }
         }
-      }
-    });
-    repoZip.on("end", function () {
-      console.info("Entity files extracted: " + numOfEntityFiles);
+      });
+      repoZip.on("end", function () {
+        repoZip.close();
+        console.info("Entity files extracted: " + numOfEntityFiles);
+        resolve();
+      });
     });
   });
 }
 
-// extractEntityFiles("aws-cloudformation-user-guide.zip", "data");
+// extractEntityFiles("aws-cloudformation-user-guide.zip", "data")
+//   .then(() => console.log("Zip file extracted"))
+//   .catch((err) => console.log(err));
 exports.extractEntityFiles = extractEntityFiles;

@@ -1,9 +1,6 @@
 # Source archives
 *awsdocs-aws-cloudformation-user-guide*
 *aws-cloudformation-user-guide*
-data/*
-test
-output
 
 # Tools
 .vscode
