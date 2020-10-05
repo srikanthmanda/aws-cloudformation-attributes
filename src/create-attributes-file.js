@@ -8,7 +8,7 @@ function createAttributesFile(input, outputDir, indexFile) {
     // const RETURN_VALUES_SECTION_START = SECTION_START + "Return Values";
     const RETURN_VALUES_SECTION_START = "## Return values";
 
-    const LINE_FILTER_PATTERN = "For more information about using the ";
+    const LINE_FILTER_REGEX = /For more information about using |The following are the available attributes and sample return values/;
     const NAME_ANCHOR_REGEX = /<a name="[\w+:-]*"><\/a>$/;
 
     const output =
@@ -44,7 +44,7 @@ function createAttributesFile(input, outputDir, indexFile) {
         break;
       } else if (
         inReturnValuesSection &&
-        !line.startsWith(LINE_FILTER_PATTERN)
+        !LINE_FILTER_REGEX.test(line)
       ) {
         attributesFile.write(line.replace(NAME_ANCHOR_REGEX, "") + "\n");
       }

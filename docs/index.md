@@ -63,6 +63,10 @@
 * [AWS::AppConfig::Environment](#awsappconfigenvironment)
 * [AWS::AppConfig::HostedConfigurationVersion](#awsappconfighostedconfigurationversion)
 
+### AWS::AppFlow
+* [AWS::AppFlow::ConnectorProfile](#awsappflowconnectorprofile)
+* [AWS::AppFlow::Flow](#awsappflowflow)
+
 ### AWS::AppMesh
 * [AWS::AppMesh::GatewayRoute](#awsappmeshgatewayroute)
 * [AWS::AppMesh::Mesh](#awsappmeshmesh)
@@ -137,11 +141,15 @@
 ### AWS::CloudFormation
 * [AWS::CloudFormation::Macro](#awscloudformationmacro)
 * [AWS::CloudFormation::Stack](#awscloudformationstack)
+* [AWS::CloudFormation::StackSet](#awscloudformationstackset)
 * [AWS::CloudFormation::WaitCondition](#awscloudformationwaitcondition)
 
 ### AWS::CloudFront
+* [AWS::CloudFront::CachePolicy](#awscloudfrontcachepolicy)
 * [AWS::CloudFront::CloudFrontOriginAccessIdentity](#awscloudfrontcloudfrontoriginaccessidentity)
 * [AWS::CloudFront::Distribution](#awscloudfrontdistribution)
+* [AWS::CloudFront::OriginRequestPolicy](#awscloudfrontoriginrequestpolicy)
+* [AWS::CloudFront::RealtimeLogConfig](#awscloudfrontrealtimelogconfig)
 * [AWS::CloudFront::StreamingDistribution](#awscloudfrontstreamingdistribution)
 
 ### AWS::CloudTrail
@@ -167,6 +175,9 @@
 
 ### AWS::CodeGuruProfiler
 * [AWS::CodeGuruProfiler::ProfilingGroup](#awscodeguruprofilerprofilinggroup)
+
+### AWS::CodeGuruReviewer
+* [AWS::CodeGuruReviewer::RepositoryAssociation](#awscodegurureviewerrepositoryassociation)
 
 ### AWS::CodePipeline
 * [AWS::CodePipeline::CustomActionType](#awscodepipelinecustomactiontype)
@@ -322,6 +333,7 @@
 
 ### AWS::EKS
 * [AWS::EKS::Cluster](#awsekscluster)
+* [AWS::EKS::FargateProfile](#awseksfargateprofile)
 * [AWS::EKS::Nodegroup](#awseksnodegroup)
 
 ### AWS::EMR
@@ -379,6 +391,7 @@
 * [AWS::GameLift::Alias](#awsgameliftalias)
 * [AWS::GameLift::Build](#awsgameliftbuild)
 * [AWS::GameLift::Fleet](#awsgameliftfleet)
+* [AWS::GameLift::GameServerGroup](#awsgameliftgameservergroup)
 * [AWS::GameLift::GameSessionQueue](#awsgameliftgamesessionqueue)
 * [AWS::GameLift::MatchmakingConfiguration](#awsgameliftmatchmakingconfiguration)
 * [AWS::GameLift::MatchmakingRuleSet](#awsgameliftmatchmakingruleset)
@@ -460,6 +473,7 @@
 * [AWS::Inspector::ResourceGroup](#awsinspectorresourcegroup)
 
 ### AWS::IoT
+* [AWS::IoT::Authorizer](#awsiotauthorizer)
 * [AWS::IoT::Certificate](#awsiotcertificate)
 * [AWS::IoT::Policy](#awsiotpolicy)
 * [AWS::IoT::ProvisioningTemplate](#awsiotprovisioningtemplate)
@@ -481,6 +495,11 @@
 ### AWS::KMS
 * [AWS::KMS::Alias](#awskmsalias)
 * [AWS::KMS::Key](#awskmskey)
+
+### AWS::Kendra
+* [AWS::Kendra::DataSource](#awskendradatasource)
+* [AWS::Kendra::Faq](#awskendrafaq)
+* [AWS::Kendra::Index](#awskendraindex)
 
 ### AWS::Kinesis
 * [AWS::Kinesis::Stream](#awskinesisstream)
@@ -627,6 +646,8 @@
 
 ### AWS::Route53Resolver
 * [AWS::Route53Resolver::ResolverEndpoint](#awsroute53resolverresolverendpoint)
+* [AWS::Route53Resolver::ResolverQueryLoggingConfig](#awsroute53resolverresolverqueryloggingconfig)
+* [AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation](#awsroute53resolverresolverqueryloggingconfigassociation)
 * [AWS::Route53Resolver::ResolverRule](#awsroute53resolverresolverrule)
 * [AWS::Route53Resolver::ResolverRuleAssociation](#awsroute53resolverresolverruleassociation)
 
@@ -657,6 +678,10 @@
 * [AWS::SSM::Parameter](#awsssmparameter)
 * [AWS::SSM::PatchBaseline](#awsssmpatchbaseline)
 * [AWS::SSM::ResourceDataSync](#awsssmresourcedatasync)
+
+### AWS::SSO
+* [AWS::SSO::Assignment](#awsssoassignment)
+* [AWS::SSO::PermissionSet](#awsssopermissionset)
 
 ### AWS::SageMaker
 * [AWS::SageMaker::CodeRepository](#awssagemakercoderepository)
@@ -750,7 +775,6 @@ This reference should not be used in CloudFormation templates\. Instead, use `AW
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -769,7 +793,6 @@ The Amazon Resource Name \(ARN\) of the certificate authority\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -789,7 +812,6 @@ The Amazon Resource Name \(ARN\) of the certificate authority\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -824,7 +846,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -876,7 +897,6 @@ The WSS endpoints of each broker instance as a list of strings\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1021,7 +1041,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1081,7 +1100,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1129,6 +1147,15 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the API ID, such as `a1bcdef2gh`\.
 
 
+### Fn::GetAtt
+
+
+
+#### 
+
+`ApiEndpoint`  
+The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
+
 
 ## AWS::ApiGatewayV2::ApiMapping
 
@@ -1163,7 +1190,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1270,6 +1296,47 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the version number\.
 
 
+## AWS::AppFlow::ConnectorProfile
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the connector profile name\. For example:
+
+            `{ "Ref": "myConnectorProfile" }`        
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`ConnectorProfileArn`  
+The unique name of the connector profile\.
+
+`CredentialsArn`  
+Not currently supported by AWS CloudFormation\.
+
+
+## AWS::AppFlow::Flow
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the flow name\. For example:
+
+            `{ "Ref": "myFlowName" }`        
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`FlowArn`  
+The flow's Amazon Resource Name \(ARN\)\.
+
+
 ## AWS::AppMesh::GatewayRoute
 
 ### Ref
@@ -1283,7 +1350,6 @@ When you pass the logical ID of an `AWS::AppMesh::GatewayRoute` resource to the 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1323,7 +1389,6 @@ When you pass the logical ID of an `AWS::AppMesh::Mesh` resource to the intrinsi
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1357,7 +1422,6 @@ When you pass the logical ID of an `AWS::AppMesh::Route` resource to the intrins
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1397,7 +1461,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualGateway` resource to th
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1434,7 +1497,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualNode` resource to the i
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1471,7 +1533,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualRouter` resource to the
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1508,7 +1569,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualService` resource to th
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1538,7 +1598,6 @@ The name of the virtual service\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1556,9 +1615,7 @@ When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrin
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
 #### 
 
@@ -1578,9 +1635,7 @@ When you pass the logical ID of an `AWS::AppSync::DataSource` resource to the in
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
 #### 
 
@@ -1600,9 +1655,7 @@ When you pass the logical ID of an `AWS::AppSync::FunctionConfiguration` resourc
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
 #### 
 
@@ -1628,9 +1681,7 @@ When you pass the logical ID of an `AWS::AppSync::GraphQLApi` resource to the in
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
 #### 
 
@@ -1660,9 +1711,7 @@ When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intr
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
 #### 
 
@@ -1703,7 +1752,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1729,7 +1777,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1749,7 +1796,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1817,7 +1863,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1839,7 +1884,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1858,7 +1902,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -1973,7 +2016,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2006,6 +2048,22 @@ For the macro `myMacro`, `Ref` returns the name of the macro\.
 
 
 
+## AWS::CloudFormation::StackSet
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the StackSetId\.
+
+### Fn::GetAtt
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\.
+
+
+#### 
+
+`StackSetId`  
+The ID of the stack that you're creating\.
+
 ## AWS::CloudFormation::WaitCondition
 
 ### Ref
@@ -2015,7 +2073,6 @@ For the macro `myMacro`, `Ref` returns the name of the macro\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2026,6 +2083,25 @@ Example return value for a wait condition with 2 signals:
  `{ "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }` 
 
 
+## AWS::CloudFront::CachePolicy
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cache policy ID\. For example: `2766f7b2-75c5-41c6-8f06-bf4303a2f2f5`\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Id`  
+The unique identifier for the cache policy\. For example: `2766f7b2-75c5-41c6-8f06-bf4303a2f2f5`\.
+
+`LastModifiedTime`  
+The date and time when the cache policy was last modified\.
+
 ## AWS::CloudFront::CloudFrontOriginAccessIdentity
 
 ### Ref
@@ -2035,7 +2111,6 @@ Example return value for a wait condition with 2 signals:
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2053,7 +2128,6 @@ The Amazon S3 canonical user ID for the origin access identity, used when giving
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2061,6 +2135,41 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 `DomainName`  
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
+
+## AWS::CloudFront::OriginRequestPolicy
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the origin request policy ID\. For example: `befd7079-9bbc-4ebf-8ade-498a3694176c`\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Id`  
+The unique identifier for the origin request policy\. For example: `befd7079-9bbc-4ebf-8ade-498a3694176c`\.
+
+`LastModifiedTime`  
+The date and time when the origin request policy was last modified\.
+
+## AWS::CloudFront::RealtimeLogConfig
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the real\-time log configuration\. For example: `arn:aws:cloudfront::111122223333:realtime-log-config/ExampleNameForRealtimeLogConfig`\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+ The Amazon Resource Name \(ARN\) of the real\-time log configuration\. For example: `arn:aws:cloudfront::111122223333:realtime-log-config/ExampleNameForRealtimeLogConfig`\.
 
 ## AWS::CloudFront::StreamingDistribution
 
@@ -2071,7 +2180,6 @@ The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2089,7 +2197,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2110,7 +2217,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2128,7 +2234,6 @@ The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2154,7 +2259,6 @@ The ARN of the composite alarm, such as `arn:aws:cloudwatch:us-west-2:1234567890
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2174,7 +2278,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### 
 
@@ -2191,7 +2294,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### 
 
@@ -2207,7 +2309,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2258,13 +2359,28 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for that profiling group\.
+
+
+## AWS::CodeGuruReviewer::RepositoryAssociation
+
+### Ref
+
+ When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Amazon Resource Name \(ARN\) of the AWS CodeGuru Reviewer [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html), such as `arn:aws:codeguru-reviewer:region:123456789012:association/universally-unique-identifier`\. 
+
+
+### Fn::GetAtt
+
+
+#### 
+
+`AssociationArn`  
+The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object\. You can retrieve this ARN by calling `ListRepositories`\.
 
 
 ## AWS::CodePipeline::CustomActionType
@@ -2284,7 +2400,6 @@ The full Amazon Resource Name \(ARN\) for that profiling group\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2303,7 +2418,6 @@ A new pipeline is always assigned a version number of 1\. This number increments
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2331,7 +2445,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2362,7 +2475,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2387,7 +2499,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2506,7 +2617,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2600,7 +2710,6 @@ MyDAXCluster
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### 
 
@@ -2674,7 +2783,6 @@ my-dax-subnet-group
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2700,7 +2808,6 @@ The Amazon Resource Name \(ARN\) of the lifecycle policy\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2730,7 +2837,6 @@ For the resource with the logical ID myEventSubscription, Ref returns the AWS DM
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2775,7 +2881,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2805,7 +2910,6 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2830,7 +2934,6 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2851,7 +2954,6 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2886,7 +2988,6 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2923,7 +3024,6 @@ For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the Dy
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2935,6 +3035,9 @@ The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamod
 The ARN of the DynamoDB stream, such as `arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`\.   
 You must specify the `StreamSpecification` property to use this attribute\.
 
+`TableId`  
+Not currently supported by AWS CloudFormation\.
+
 
 ## AWS::EC2::CapacityReservation
 
@@ -2945,7 +3048,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -2974,7 +3076,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3038,7 +3139,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3072,7 +3172,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3089,7 +3188,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3114,7 +3212,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3153,7 +3250,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3174,7 +3270,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3192,7 +3287,6 @@ The type of local gateway route\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3240,7 +3334,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3285,7 +3378,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3328,7 +3420,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3365,7 +3456,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3504,7 +3594,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3550,7 +3639,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3655,7 +3743,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3689,7 +3776,6 @@ In the following example, the `Ref` function returns the name of the `MyECSClust
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3718,7 +3804,6 @@ In the following example, the `Ref` function returns the ARN of the `MyECSServic
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3755,7 +3840,6 @@ Not currently supported by AWS CloudFormation\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3776,7 +3860,6 @@ The ID of the task set\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3801,7 +3884,6 @@ For the Amazon EFS file system `fs-12345678`, Ref returns the file system ID\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3826,7 +3908,6 @@ For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mou
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3848,7 +3929,6 @@ For the Amazon EKS cluster `myCluster`, `Ref` returns the name of the cluster\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3870,6 +3950,27 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
 
+## AWS::EKS::FargateProfile
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "myFargateProfile" }` 
+
+For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID of the Fargate profile\. For example, `<cluster_name>/<Fargate_profile_name>`\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
+
+
 ## AWS::EKS::Nodegroup
 
 ### Ref
@@ -3883,7 +3984,6 @@ For the Amazon EKS node group `myNodegroup`, Ref returns the physical resource I
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3907,7 +4007,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3954,7 +4053,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -3987,11 +4085,9 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the resource name\.
 
- For more information about using the Ref function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4048,7 +4144,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the resource name\.
 
- For more information about using the Ref function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 
 ## AWS::ElasticBeanstalk::Application
@@ -4084,7 +4179,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4106,7 +4200,6 @@ Example instance IP address:
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4152,7 +4245,6 @@ The owner of the source security group\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4182,7 +4274,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4201,11 +4292,9 @@ The name of the target group\. For example, `my-target-group`\.
 
 ### Ref
 
-When the logical ID of this resource is provided to the Ref intrinsic function, Ref returns the resource name, such as `mystack-elasticsea-abc1d2efg3h4.` For more information about using the Ref function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt
 
-Fn::GetAtt returns a value for a specified attribute of this type\. For more information, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. The following are the available attributes and sample return values\.
 
 #### 
 
@@ -4228,7 +4317,6 @@ When you provide the logical ID of this resource to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4255,7 +4343,6 @@ Returns a value similar to the following:
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4275,7 +4362,6 @@ When you provide the logical ID of this resource to the `Ref` intrinsic function
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4299,7 +4385,6 @@ Returns a value similar to the following:
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4402,7 +4487,6 @@ For the Amazon FSx file system `fs-01234567890123456`, Ref returns the file syst
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4417,6 +4501,13 @@ Use the LustreMountName value when mounting an Amazon FSx for Lustre file system
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the alias ID, such as `alias-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
+
+### Fn::GetAtt
+
+#### 
+
+`AliasId`  
+Not currently supported by AWS CloudFormation\.
 
 
 ## AWS::GameLift::Build
@@ -4435,6 +4526,26 @@ Use the LustreMountName value when mounting an Amazon FSx for Lustre file system
 
 
 
+## AWS::GameLift::GameServerGroup
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns unique Amazon Resource Name \(ARN\) assigned to the game server group\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`AutoScalingGroupArn`  
+Not currently supported by AWS CloudFormation\.
+
+`GameServerGroupArn`  
+The unique Amazon Resource Name \(ARN\) assigned to the game server group\.
+
+
 ## AWS::GameLift::GameSessionQueue
 
 ### Ref
@@ -4444,7 +4555,6 @@ Use the LustreMountName value when mounting an Amazon FSx for Lustre file system
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4465,7 +4575,6 @@ A descriptive label that is associated with a game session queue\. Names are uni
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4486,7 +4595,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4507,7 +4615,6 @@ The unique name of the rule set\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4528,7 +4635,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4549,7 +4655,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4567,7 +4672,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4675,7 +4779,6 @@ The ARN of the listener, such as `arn:aws:globalaccelerator::012345678901:accele
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4710,7 +4813,6 @@ The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4745,7 +4847,6 @@ The name of the `CoreDefinition`, such as `MyCoreDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4780,7 +4881,6 @@ The name of the device definition\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4815,7 +4915,6 @@ The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4856,7 +4955,6 @@ The time \(in milliseconds since the epoch\) when the group role was attached to
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4891,7 +4989,6 @@ The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4926,7 +5023,6 @@ The name of the `ResourceDefinition`, such as `MyResourceDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4965,7 +5061,6 @@ The name of the `SubscriptionDefinition`, such as `MySubscriptionDefinition`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -4992,7 +5087,6 @@ The type of the config, such as `tracking`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5016,7 +5110,6 @@ The ARN of the dataflow endpoint group, such as `arn:aws:groundstation:us-east-2
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5088,7 +5181,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5106,7 +5198,6 @@ Returns the secret access key for the specified AWS::IAM::AccessKey resource\. F
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5128,7 +5219,6 @@ For the `AWS::IAM::InstanceProfile` resource with the logical ID `MyProfile`, Re
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5174,7 +5264,6 @@ For the `AWS::IAM::Role` resource with the logical ID `RootRole`, `Ref` will ret
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5212,7 +5301,6 @@ For the `AWS::IAM::ServiceLinkedRole` resource with the logical ID `BasicSLR`, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5244,7 +5332,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5268,7 +5355,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5286,7 +5372,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5307,7 +5392,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5325,7 +5409,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5343,7 +5426,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5361,7 +5443,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5379,7 +5460,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5397,7 +5477,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5405,6 +5484,17 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the resource group that is created\.
 
+
+## AWS::IoT::Authorizer
+
+### Ref
+
+### Fn::GetAtt
+
+#### 
+
+`Arn`  
+Not currently supported by AWS CloudFormation\.
 
 ## AWS::IoT::Certificate
 
@@ -5421,7 +5511,6 @@ A value similar to the following is returned:
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5446,7 +5535,6 @@ The certificate ID\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5461,15 +5549,14 @@ The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
 
- `{ "Ref": "MyThing" }` 
+ `{ "Ref": "MyTemplate" }` 
 
 For a stack named MyStack, a value similar to the following is returned:
 
- `MyStack-MyThing-AB1CDEFGHIJK` 
+ `MyStack-MyTemplate-AB1CDEFGHIJK` 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5506,7 +5593,6 @@ For a stack named My\-Stack \(the \- character is omitted\), a value similar to 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5524,7 +5610,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5548,7 +5633,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5569,7 +5653,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5629,15 +5712,84 @@ For the AWS IoT Events input `myInput`, `Ref` returns the name of the input\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS KMS customer master key \(CMK\), such as `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`\.  
-For help with finding the ARN of a CMK, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.
+For information about the key ARN of a CMK, see [Key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN) in the *AWS Key Management Service Developer Guide*\.
 
+`KeyId`  
+The key ID of the AWS KMS customer master key \(CMK\), such as `1234abcd-12ab-34cd-56ef-1234567890ab`\.  
+For information about the key ID of a CMK, see [Key ID](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id) in the *AWS Key Management Service Developer Guide*\.
+
+
+## AWS::Kendra::DataSource
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the data source ID\. For example:
+
+ `{ "Ref": "<data source ID>|<index ID>" }` 
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+The Amazon Resource Name \(ARN\) of the data source\. For example:  
+`arn:aws:kendra:us-west-2:111122223333:index/335c3741-41df-46a6-b5d3-61f85b787884/data-source/b8cae438-6787-4091-8897-684a652bbb0a`
+
+`Id`  
+The identifier for the data source\. For example:  
+ `b8cae438-6787-4091-8897-684a652bbb0a`\.
+
+## AWS::Kendra::Faq
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the FAQ identifier\. For example:
+
+`{ "Ref": "<faq-id>|<index-id>" }`
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+`arn:aws:kendra:us-west-2:111122223333:index/335c3741-41df-46a6-b5d3-61f85b787884/faq/f61995a6-cd5c-4e99-9cfc-58816d8bfaa7`
+
+`Id`  
+The identifier for the FAQ\. For example:  
+`f61995a6-cd5c-4e99-9cfc-58816d8bfaa7`
+
+## AWS::Kendra::Index
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the index ID\. For example:
+
+ `{"Ref": "index-id"}` 
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+The Amazon Resource Name \(ARN\) of the index\. For example: `arn:aws:kendra:us-west-2:111122223333:index/0123456789abcdef`\.
+
+`Id`  
+The identifier for the index\. For example: `f4aeaa10-8056-4b2c-a343-522ca0f41234`\.
 
 ## AWS::Kinesis::Stream
 
@@ -5650,7 +5802,6 @@ For help with finding the ARN of a CMK, see [Finding the Key ID and ARN](https:/
 
  `Fn::GetAtt` returns a value for the `Arn` attribute\.
 
-For more information about using Fn::GetAtt, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. 
 
 #### 
 
@@ -5667,9 +5818,7 @@ When you pass the logical ID of an `AWS::Kinesis::StreamConsumer` resource to th
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using Fn::GetAtt, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. 
 
 #### 
 
@@ -5699,9 +5848,7 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt
 
-Fn::GetAtt returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-For more information about using Fn::GetAtt, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. 
 
 #### 
 
@@ -5748,7 +5895,6 @@ Not currently supported by AWS CloudFormation\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5782,7 +5928,6 @@ The Amazon Resource Name \(ARN\) of the function\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5800,7 +5945,6 @@ The version number\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5818,7 +5962,6 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:1234
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5863,7 +6006,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5878,7 +6020,7 @@ The date and time, in UTC and extended ISO 8601 format, when the custom data ide
 Specifies whether the custom data identifier was deleted\. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently\. Instead, it soft deletes the identifier\.
 
 `Id`  
-The unique identifier for the custom data identifier that was created\.
+The unique identifier for the custom data identifier\.
 
 
 ## AWS::Macie::FindingsFilter
@@ -5889,7 +6031,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5913,7 +6054,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5934,7 +6074,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5955,7 +6094,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -5982,7 +6120,6 @@ When you pass the logical ID of an `AWS::MediaConvert::JobTemplate` resource to 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6021,7 +6158,6 @@ When you pass the logical ID of an `AWS::MediaConvert::Queue` resource to the in
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6043,7 +6179,6 @@ For example: `{ "Ref": "myChannel" }`
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6058,15 +6193,16 @@ The inputs that are attached to this channel\. The inputs are identified by thei
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the input\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the input\.
 
-For example: `{ "Ref": "myInput" }`
+For example: `{ "Ref": "1234567" }`
 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
+
+The IP addresses are in a string format that shows a list\. For example `[rtp://203.0.113.28:5000, rtp://203.0.113.33:5005]`
 
 #### 
 
@@ -6074,7 +6210,7 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 The ARN of the MediaLive input\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:input:1234567\. MediaLive creates this ARN when it creates the input\. 
 
 `Destinations`  
-For a push input, the destination or destinations for the input\. The destinations are the IP addresses on MediaLive where the upstream system pushes the content to for this input\. MediaLive creates these IP addresses when it creates the input\. 
+For a push input, the destination or destinations for the input\. The destinations are the IP addresses on MediaLive where the upstream system pushes the content for this input\. MediaLive creates these IP addresses when it creates the input\. 
 
 `Sources`  
 For a pull input, the source or sources for the input\. The sources are the IP addresses on the upstream system where MediaLive pulls the content from for this input\. You included these IP addresses in the create request\.
@@ -6090,7 +6226,6 @@ For example: `{ "Ref": "myInputSecurityGroup" }`
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6109,7 +6244,6 @@ For example: `{ "Ref": "myContainer" }`
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6126,7 +6260,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6159,7 +6292,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6201,7 +6333,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6222,7 +6353,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6243,7 +6373,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6272,7 +6401,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6317,7 +6445,6 @@ For the AWS OpsWorks instance *myInstance1*, `Ref` returns the AWS OpsWorks inst
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6372,7 +6499,6 @@ For the AWS OpsWorks stack *myStack*, `Ref` returns the AWS OpsWorks stack ID\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6398,7 +6524,6 @@ The user's SSH user name, as a string\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6408,6 +6533,9 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 
 `Endpoint`  
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
+
+`Id`  
+Not currently supported by AWS CloudFormation\.
 
 
 ## AWS::Pinpoint::ADMChannel
@@ -6454,7 +6582,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6485,7 +6612,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6512,7 +6638,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6543,7 +6668,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6567,7 +6691,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6587,7 +6710,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6648,7 +6770,6 @@ For the Amazon Pinpoint identity `myEmailIdentity`, Ref returns the name of the 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6698,7 +6819,6 @@ For the resource with the logical ID `myQLDBStream`, `Ref` returns the ID or ARN
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6719,7 +6839,6 @@ The unique ID that QLDB assigns to each QLDB journal stream\. For example: `IiPT
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6737,7 +6856,6 @@ The Amazon Resource Name \(ARN\) of the resource share\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6769,7 +6887,6 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6873,7 +6990,6 @@ For the Amazon Redshift cluster `myCluster`, `Ref` returns the name of the clust
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6944,7 +7060,6 @@ When you pass the logical ID of an `AWS::RoboMaker::Fleet` resource to the intri
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6970,7 +7085,6 @@ When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource t
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -6999,7 +7113,6 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplication` resou
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7026,6 +7139,13 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the health check ID, such as `e0a123b4-4dba-4650-935e-example`\.
 
 
+### Fn::GetAtt
+
+#### 
+
+`HealthCheckId`  
+Not currently supported by AWS CloudFormation\.
+
 
 ## AWS::Route53::HostedZone
 
@@ -7036,7 +7156,6 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7071,7 +7190,6 @@ This attribute is not supported for private hosted zones\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7095,6 +7213,88 @@ The name that you assigned to the resolver endpoint when you created the endpoin
 The ID of the resolver endpoint\.
 
 
+## AWS::Route53Resolver::ResolverQueryLoggingConfig
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the resource that contains settings for one query logging configuration\.
+
+For example: `{ "Ref": "rqlc-1111222233334444" }`
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`Arn`  
+The Amazon Resource Name \(ARN\) for the query logging configuration\.
+
+`AssociationCount`  
+The number of VPCs that are associated with the query logging configuration\.
+
+`CreationTime`  
+The date and time that the query logging configuration was created, in Unix time format and Coordinated Universal Time \(UTC\)\.
+
+`CreatorRequestId`  
+A unique string that identifies the request that created the query logging configuration\. The `CreatorRequestId` allows failed requests to be retried without the risk of running the operation twice\.
+
+`Id`  
+The ID for the query logging configuration\.
+
+`OwnerId`  
+The AWS account ID for the account that created the query logging configuration\. 
+
+`ShareStatus`  
+An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with the current account by another AWS account\. Sharing is configured through AWS Resource Access Manager \(AWS RAM\)\.
+
+`Status`  
+The status of the specified query logging configuration\. Valid values include the following:  
++ `CREATING`: Resolver is creating the query logging configuration\.
++ `CREATED`: The query logging configuration was successfully created\. Resolver is logging queries that originate in the specified VPC\.
++ `DELETING`: Resolver is deleting this query logging configuration\.
++ `FAILED`: Resolver can't deliver logs to the location that is specified in the query logging configuration\. Here are two common causes:
+  + The specified destination \(for example, an Amazon S3 bucket\) was deleted\.
+  + Permissions don't allow sending logs to the destination\.
+
+## AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the configuration for DNS query logging\.
+
+For example: `{ "Ref": "rqlca-1111222233334444" }`
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`CreationTime`  
+The date and time that the VPC was associated with the query logging configuration, in Unix time format and Coordinated Universal Time \(UTC\)\.
+
+`Error`  
+If the value of `Status` is `FAILED`, the value of `Error` indicates the cause:  
++ `DESTINATION_NOT_FOUND`: The specified destination \(for example, an Amazon S3 bucket\) was deleted\.
++ `ACCESS_DENIED`: Permissions don't allow sending logs to the destination\.
+If the value of `Status` is a value other than `FAILED`, `Error` is null\. 
+
+`ErrorMessage`  
+Contains additional information about the error\. If the value or `Error` is null, the value of `ErrorMessage` is also null\.
+
+`Id`  
+The ID of the query logging association\.
+
+`Status`  
+The status of the specified query logging association\. Valid values include the following:  
++ `CREATING`: Resolver is creating an association between an Amazon Virtual Private Cloud \(Amazon VPC\) and a query logging configuration\.
++ `CREATED`: The association between an Amazon VPC and a query logging configuration was successfully created\. Resolver is logging queries that originate in the specified VPC\.
++ `DELETING`: Resolver is deleting this query logging association\.
++ `FAILED`: Resolver either couldn't create or couldn't delete the query logging association\.
+
 ## AWS::Route53Resolver::ResolverRule
 
 ### Ref
@@ -7104,7 +7304,6 @@ The ID of the resolver endpoint\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7137,7 +7336,6 @@ When the value of `RuleType` is `FORWARD`, the IP addresses that the outbound en
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7168,38 +7366,36 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
-Example: `mystack-mybucket` 
+Example: `DOC-EXAMPLE-BUCKET` 
 
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
-Example: `arn:aws:s3:::mybucket` 
+Example: `arn:aws:s3:::DOC-EXAMPLE-BUCKET` 
 
 `DomainName`  
 Returns the IPv4 DNS name of the specified bucket\.  
-Example: `mystack-mybucket.s3.amazonaws.com` 
+Example: `DOC-EXAMPLE-BUCKET.s3.amazonaws.com` 
 
 `DualStackDomainName`  
 Returns the IPv6 DNS name of the specified bucket\.  
-Example: ` mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com`   
+Example: ` DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com`   
 For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html)\.
 
 `RegionalDomainName`  
 Returns the regional domain name of the specified bucket\.  
-Example: `mystack-mybucket.s3.us-east-2.amazonaws.com` 
+Example: `DOC-EXAMPLE-BUCKET.s3.us-east-2.amazonaws.com` 
 
 `WebsiteURL`  
 Returns the Amazon S3 website endpoint for the specified bucket\.  
-
-Example \(IPv4\): `http://mystack-mybucket.s3-website-us-east-2.amazonaws.com/`   
-Example \(IPv6\): `http://mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com/` 
+Example \(IPv4\): `http://DOC-EXAMPLE-BUCKET.s3-website.us-east-2.amazonaws.com`   
+Example \(IPv6\): `http://DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com` 
 
 
 ## AWS::SDB::Domain
@@ -7242,7 +7438,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7262,7 +7457,6 @@ Returns the name of an Amazon SNS topic\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7325,7 +7519,6 @@ Not currently supported by AWS CloudFormation\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7356,6 +7549,31 @@ The ID of the default patch baseline provided by AWS is an ARN, for example `arn
 
 
 
+## AWS::SSO::Assignment
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, combined by all fields with the delimiter `|`\.
+
+
+
+## AWS::SSO::PermissionSet
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `permission-arn|sso-instance-arn`\.
+
+
+### Fn::GetAtt
+
+
+
+#### 
+
+`PermissionSetArn`  
+The permission set ARN of the permission set, such as `arn:aws:sso:::permissionSet/ins-instanceid/ps-permissionsetid`\.
+
+
 ## AWS::SageMaker::CodeRepository
 
 ### Ref
@@ -7376,10 +7594,8 @@ Not currently supported by AWS CloudFormation\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### 
 
@@ -7396,10 +7612,8 @@ The name of the endpoint, such as `MyEndpoint`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### 
 
@@ -7418,10 +7632,8 @@ When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intri
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### 
 
@@ -7446,10 +7658,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### 
 
@@ -7466,10 +7676,8 @@ The name of the notebook instance, such as `MyNotebookInstance`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### 
 
@@ -7561,7 +7769,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7585,7 +7792,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7636,7 +7842,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7709,7 +7914,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7738,7 +7942,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7759,7 +7962,6 @@ The ID of the private namespace\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7780,7 +7982,6 @@ The ID of the public namespace\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7810,7 +8011,6 @@ Returns a value similar to the following:
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### 
 
@@ -7819,7 +8019,6 @@ Returns the name of the activity\. For example:
  `{ "Fn::GetAtt": ["MyActivity", "Name"] }`   
 Returns a value similar to the following:  
  `myActivity`   
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 
 ## AWS::StepFunctions::StateMachine
@@ -7837,7 +8036,6 @@ Returns a value similar to the following:
 
 ### Fn::GetAtt
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### 
 
@@ -7851,7 +8049,6 @@ Returns the name of your state machine:
  `HelloWorld-StateMachine`   
 If you did not specify the name it will be similar to the following:  
  `MyStateMachine-1234abcdefgh`   
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 
 ## AWS::Synthetics::Canary
@@ -7863,7 +8060,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7884,7 +8080,6 @@ The state of the canary\. For example, `RUNNING`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 
@@ -7907,7 +8102,6 @@ An example `ServerId` is `s-01234567890abcdef`\.
 
 ### Fn::GetAtt
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 
 #### 

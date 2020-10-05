@@ -2,8 +2,9 @@
   "name": "aws-cloudformation-attributes",
   "version": "0.0.1",
   "description": "An application to generate a cheatsheet of attributes returned by Ref and Fn::GetAtt intrinsic functions for AWS CloudFormation resources.",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
