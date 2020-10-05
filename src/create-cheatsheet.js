@@ -58,6 +58,7 @@ async function createCheatsheet(indexFile, cheatSheet) {
 
   fs.appendFileSync(cheatSheet, fs.readFileSync(cheatSheetBody));
   fs.appendFileSync(cheatSheet, FOOTER);
+  console.log("cheatSheet created: " + cheatSheet);
   fs.unlink(cheatSheetBody, (error) => {
     if (error) {
       console.error("Failed to delete cheatSheet body: " + cheatSheetBody);

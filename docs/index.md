@@ -777,7 +777,6 @@ This reference should not be used in CloudFormation templates\. Instead, use `AW
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the issued certificate\.
@@ -795,7 +794,6 @@ The Amazon Resource Name \(ARN\) of the certificate authority\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) for the private CA that issued the certificate\.
@@ -814,7 +812,6 @@ The Amazon Resource Name \(ARN\) of the certificate authority\.
 
 
 
-#### 
 
 `CompleteCertificateChain`  
 The complete Base64 PEM\-encoded certificate chain, including the certificate authority certificate\.
@@ -848,7 +845,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AmqpEndpoints`  
 The AMQP endpoints of each broker instance as a list of strings\.  
@@ -899,7 +895,6 @@ The WSS endpoints of each broker instance as a list of strings\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.  
@@ -928,7 +923,6 @@ The revision number of the configuration\.
 
 ### Fn::GetAtt
 
-#### 
 
 `AppId`  
 Unique Id for the Amplify App\.
@@ -946,7 +940,6 @@ Default domain for the Amplify App\.
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
  ARN for a branch, part of an Amplify App\. 
@@ -958,7 +951,6 @@ Default domain for the Amplify App\.
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 ARN for the Domain Association\.
@@ -1043,7 +1035,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `DistributionDomainName`  
 The Amazon CloudFront distribution domain name that's mapped to the custom domain name\. This is only applicable for endpoints whose type is `EDGE`\.  
@@ -1102,7 +1093,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `RootResourceId`  
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
@@ -1151,7 +1141,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ApiEndpoint`  
 The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
@@ -1192,7 +1181,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `RegionalDomainName`  
 The domain name associated with the regional endpoint for this custom domain name\. You set up this association by adding a DNS record that points the custom domain name to this regional domain name\.
@@ -1309,7 +1297,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ConnectorProfileArn`  
 The unique name of the connector profile\.
@@ -1331,7 +1318,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `FlowArn`  
 The flow's Amazon Resource Name \(ARN\)\.
@@ -1352,7 +1338,6 @@ When you pass the logical ID of an `AWS::AppMesh::GatewayRoute` resource to the 
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the gateway route\.
@@ -1391,7 +1376,6 @@ When you pass the logical ID of an `AWS::AppMesh::Mesh` resource to the intrinsi
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the mesh\.
@@ -1424,7 +1408,6 @@ When you pass the logical ID of an `AWS::AppMesh::Route` resource to the intrins
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the route\.
@@ -1463,7 +1446,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualGateway` resource to th
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the virtual gateway\.
@@ -1499,7 +1481,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualNode` resource to the i
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the virtual node\.
@@ -1535,7 +1516,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualRouter` resource to the
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the virtual router\.
@@ -1571,7 +1551,6 @@ When you pass the logical ID of an `AWS::AppMesh::VirtualService` resource to th
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for the virtual service\.
@@ -1600,7 +1579,6 @@ The name of the virtual service\.
 
 
 
-#### 
 
 `StreamingUrl`  
 The URL to start an image builder streaming session, returned as a string\.
@@ -1617,7 +1595,6 @@ When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrin
 
 
 
-#### 
 
 `ApiKey`  
 The API key\.
@@ -1637,7 +1614,6 @@ When you pass the logical ID of an `AWS::AppSync::DataSource` resource to the in
 
 
 
-#### 
 
 `DataSourceArn`  
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
@@ -1657,7 +1633,6 @@ When you pass the logical ID of an `AWS::AppSync::FunctionConfiguration` resourc
 
 
 
-#### 
 
 `DataSourceName`  
 The name of data source this function will attach\.
@@ -1683,7 +1658,6 @@ When you pass the logical ID of an `AWS::AppSync::GraphQLApi` resource to the in
 
 
 
-#### 
 
 `ApiId`  
 Unique AWS AppSync GraphQL API identifier\. 
@@ -1713,7 +1687,6 @@ When you pass the logical ID of an `AWS::AppSync::Resolver` resource to the intr
 
 
 
-#### 
 
 `FieldName`  
 The GraphQL field on a type that invokes the resolver\. 
@@ -1754,7 +1727,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ApplicationARN`  
 Returns the Amazon Resource Name \(ARN\) of the application, such as ` arn:aws:applicationinsights:us-east-1:123456789012:application/resource-group/my_resource_group`\.
@@ -1779,7 +1751,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `NamedQueryId`  
 The unique ID of the query\.
@@ -1798,7 +1769,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `CreationTime`  
 The date and time the workgroup was created, as a UNIX timestamp in seconds\. For example: `1582761016`\.
@@ -1865,7 +1835,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `BackupPlanArn`  
 An Amazon Resource Name \(ARN\) that uniquely identifies a backup plan; for example, `arn:aws:backup:us-east-1:123456789012:plan:8F81F553-3A74-4A3F-B93D-B3360DC80C50`\.
@@ -1886,7 +1855,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `BackupPlanId`  
 Uniquely identifies a backup plan\.
@@ -1904,7 +1872,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `BackupVaultArn`  
 An Amazon Resource Name \(ARN\) that uniquely identifies a backup vault; for example, `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault`\.
@@ -1956,7 +1923,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes\.
 
 
-#### 
 
 `Arn`  
 The unique identifier for your Cost Category\.
@@ -2001,7 +1967,6 @@ When you pass the logical ID of this resource to the intrinsic Ref function, Ref
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 Not currently supported by AWS CloudFormation\.
@@ -2018,7 +1983,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the development environment, such as `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567`\.
@@ -2059,7 +2023,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\.
 
 
-#### 
 
 `StackSetId`  
 The ID of the stack that you're creating\.
@@ -2075,7 +2038,6 @@ The ID of the stack that you're creating\.
 
 
 
-#### 
 
 `Data`  
 A JSON object that contains the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait condition signal JSON format](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html#using-cfn-waitcondition-signaljson)\.  
@@ -2094,7 +2056,6 @@ Example return value for a wait condition with 2 signals:
 
 
 
-#### 
 
 `Id`  
 The unique identifier for the cache policy\. For example: `2766f7b2-75c5-41c6-8f06-bf4303a2f2f5`\.
@@ -2113,7 +2074,6 @@ The date and time when the cache policy was last modified\.
 
 
 
-#### 
 
 `S3CanonicalUserId`  
 The Amazon S3 canonical user ID for the origin access identity, used when giving the origin access identity read permission to an object in Amazon S3\. For example: `b970b42360b81c8ddbd79d2f5df0069ba9033c8a79655752abe380cd6d63ba8bcf23384d568fcf89fc49700b5e11a0fd`\.
@@ -2130,7 +2090,6 @@ The Amazon S3 canonical user ID for the origin access identity, used when giving
 
 
 
-#### 
 
 `DomainName`  
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
@@ -2147,7 +2106,6 @@ The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 
 
-#### 
 
 `Id`  
 The unique identifier for the origin request policy\. For example: `befd7079-9bbc-4ebf-8ade-498a3694176c`\.
@@ -2166,7 +2124,6 @@ The date and time when the origin request policy was last modified\.
 
 
 
-#### 
 
 `Arn`  
  The Amazon Resource Name \(ARN\) of the real\-time log configuration\. For example: `arn:aws:cloudfront::111122223333:realtime-log-config/ExampleNameForRealtimeLogConfig`\.
@@ -2182,7 +2139,6 @@ The date and time when the origin request policy was last modified\.
 
 
 
-#### 
 
 `DomainName`  
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
@@ -2199,7 +2155,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 
 
-#### 
 
 `Arn`  
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the CloudTrail trail, such as `arn:aws:cloudtrail:us-east-2:123456789012:trail/myCloudTrail`\.
@@ -2219,7 +2174,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 
 
-#### 
 
 `Arn`  
 The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
@@ -2236,7 +2190,6 @@ The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789
 
 
 
-#### 
 
 `Arn`  
 The ARN of the composite alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm/CompositeAlarmName`\.
@@ -2261,7 +2214,6 @@ The ARN of the composite alarm, such as `arn:aws:cloudwatch:us-west-2:1234567890
 
 
 
-#### 
 
 `Arn`  
 The ARN of the Contributor Insights rule, such as `arn:aws:cloudwatch:us-west-2:123456789012:insight-rule/MyInsightRuleName`\.
@@ -2279,7 +2231,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 ### Fn::GetAtt
 
 
-#### 
 
 `Arn`  
 The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
@@ -2295,7 +2246,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 ### Fn::GetAtt
 
 
-#### 
 
 `Arn`  
 The ARN of the AWS CodeBuild report group, such as `arn:aws:codebuild:region:123456789012:report-group/myReportGroupName`\. 
@@ -2311,7 +2261,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 
 
-#### 
 
 `Arn`  
 When you pass the logical ID of this resource, the function returns the Amazon Resource Name \(ARN\) of the repository\.
@@ -2361,7 +2310,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The full Amazon Resource Name \(ARN\) for that profiling group\.
@@ -2377,7 +2325,6 @@ The full Amazon Resource Name \(ARN\) for that profiling group\.
 ### Fn::GetAtt
 
 
-#### 
 
 `AssociationArn`  
 The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object\. You can retrieve this ARN by calling `ListRepositories`\.
@@ -2402,7 +2349,6 @@ The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/la
 
 
 
-#### 
 
 `Version`  
 The version of the pipeline\.  
@@ -2420,7 +2366,6 @@ A new pipeline is always assigned a version number of 1\. This number increments
 
 
 
-#### 
 
 `Url`  
 The webhook URL generated by AWS CodePipeline, such as https://eu\-central\-1\.webhooks\.aws/trigger123456\.
@@ -2447,7 +2392,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ConnectionArn`  
 The Amazon Resource Name \(ARN\) of the connection\. The ARN is used as the connection reference when the connection is shared between AWS services\. For example: `arn:aws:codestar-connections:us-west-2:123456789012:connection/39e4c34d-e13a-4e94-a886-ea67651bf042`\.
@@ -2477,7 +2421,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Name`  
 The name of the Amazon Cognito identity pool, returned as a string\.
@@ -2501,7 +2444,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the user pool, such as `arn:aws:cognito-idp:us-east-1:123412341234:userpool/us-east-1_123412341`\.
@@ -2619,7 +2561,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS Config rule, such as `arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi`\.
@@ -2711,7 +2652,6 @@ MyDAXCluster
 ### Fn::GetAtt
 
 
-#### 
 
 `Arn`  
 Returns the ARN of the DAX cluster\. For example:  
@@ -2785,7 +2725,6 @@ my-dax-subnet-group
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the lifecycle policy\.
@@ -2810,7 +2749,6 @@ The Amazon Resource Name \(ARN\) of the lifecycle policy\.
 
 
 
-#### 
 
 `ExternalId`  
 A value that can be used for cross\-account validation\.
@@ -2839,7 +2777,6 @@ For the resource with the logical ID myEventSubscription, Ref returns the AWS DM
 
 
 
-#### 
 
 `ReplicationInstancePrivateIpAddresses`  
 One or more private IP addresses for the replication instance\.
@@ -2883,7 +2820,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The ARN of the new behavior graph\.
@@ -2912,7 +2848,6 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 
 
-#### 
 
 `Alias`  
 The alias for a directory\. For example: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)\.
@@ -2936,7 +2871,6 @@ In the following sample, the `Ref` function returns the ID of the `myDirectory` 
 
 
 
-#### 
 
 `Alias`  
 The alias for a directory\. For example: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)\.
@@ -2956,7 +2890,6 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 
 
-#### 
 
 `ClusterResourceId`  
 The resource id for the cluster; for example: `cluster-ABCD1234EFGH5678IJKL90MNOP`\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\. 
@@ -2990,7 +2923,6 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 
 
-#### 
 
 `Endpoint`  
 The connection endpoint for the instance\. For example: `sample-cluster.cluster-abcdefghijkl.us-east-1.docdb.amazonaws.com`\.
@@ -3026,7 +2958,6 @@ For the resource with the logical ID `myDynamoDBTable`, `Ref` will return the Dy
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable`\.
@@ -3050,7 +2981,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AvailabilityZone`  
 Returns the Availability Zone in which the capacity is reserved\. For example: `us-east-1a`\.
@@ -3078,7 +3008,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `CarrierGatewayId`  
 The ID of the carrier gateway\.
@@ -3141,7 +3070,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AllocationId`  
 The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC\. This is returned only for VPC elastic IP addresses\. For example, `eipalloc-5723d13e`\.
@@ -3174,7 +3102,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Id`  
 The ID of the flow log\. For example, `fl-123456abc123abc1`\.
@@ -3190,7 +3117,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AssociationId`  
 The ID of the route table association\.
@@ -3214,7 +3140,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AvailabilityZone`  
 The Availability Zone where the specified instance is launched\. For example: `us-east-1b`\.  
@@ -3252,7 +3177,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `DefaultVersionNumber`  
 The default version of the launch template, such as 2\.  
@@ -3272,7 +3196,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `State`  
 The state of the local gateway route table\.
@@ -3289,7 +3212,6 @@ The type of local gateway route\.
 
 
 
-#### 
 
 `LocalGatewayId`  
 The ID of the local gateway\.
@@ -3336,7 +3258,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `PrimaryPrivateIpAddress`  
 Returns the primary private IP address of the network interface\. For example, `10.0.0.192`\.
@@ -3380,7 +3301,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The ARN of the prefix list\. For example, `arn:aws:ec2:us-east-1:123456789012:prefix-list/pl-0123123123123abcd`\.
@@ -3422,7 +3342,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `GroupId`  
 The group ID of the specified security group, such as `sg-94b3a1f6`\.
@@ -3458,7 +3377,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AvailabilityZone`  
 The Availability Zone of this subnet\. For example:  
@@ -3491,7 +3409,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-#### 
 
 `AssociationId`  
 Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html) property\.
@@ -3596,7 +3513,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `CidrBlock`  
 The set of IP addresses for the VPC\. For example, `10.0.0.0/16`\.
@@ -3641,7 +3557,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `CreationTimestamp`  
 The date and time the VPC endpoint was created\. For example: `Fri Sep 28 23:34:36 UTC 2018.`
@@ -3745,7 +3660,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository` resource\. For example, `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository `\.
@@ -3778,7 +3692,6 @@ In the following example, the `Ref` function returns the name of the `MyECSClust
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster`\.
@@ -3806,7 +3719,6 @@ In the following example, the `Ref` function returns the ARN of the `MyECSServic
 
 
 
-#### 
 
 `Name`  
 The name of the Amazon ECS service, such as `sample-webapp`\.
@@ -3825,7 +3737,6 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
 
 ### Fn::GetAtt
 
-#### 
 
 `TaskDefinitionArn`  
 Not currently supported by AWS CloudFormation\.
@@ -3842,7 +3753,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `Id`  
 The ID of the task set\.
@@ -3862,7 +3772,6 @@ The ID of the task set\.
 
 
 
-#### 
 
 `AccessPointId`  
 The ID of the EFS access point\.
@@ -3886,7 +3795,6 @@ For the Amazon EFS file system `fs-12345678`, Ref returns the file system ID\.
 
 
 
-#### 
 
 `Arn`  
 Not currently supported by AWS CloudFormation\.
@@ -3910,7 +3818,6 @@ For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mou
 
 
 
-#### 
 
 `IpAddress`  
 The IPv4 address of the mount target\.
@@ -3931,7 +3838,6 @@ For the Amazon EKS cluster `myCluster`, `Ref` returns the name of the cluster\.
 
 
 
-#### 
 
 `Arn`  
 The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:cluster/prod`\.
@@ -3965,7 +3871,6 @@ For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID 
 
 
 
-#### 
 
 `Arn`  
 The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
@@ -3986,7 +3891,6 @@ For the Amazon EKS node group `myNodegroup`, Ref returns the physical resource I
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) associated with the managed node group\.
@@ -4009,7 +3913,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `MasterPublicDNS`  
 The public DNS name of the master node \(instance\), such as `ec2-12-123-123-123.us-west-2.compute.amazonaws.com`\.
@@ -4055,7 +3958,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 
 
-#### 
 
 `ConfigurationEndpoint.Address`  <a name="ConfigurationEndpoint.Address-fn::getatt"></a>
  The DNS hostname of the cache node\.  
@@ -4090,7 +3992,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 
 
-#### 
 
 `ConfigurationEndPoint.Address`  <a name="ConfigurationEndPoint.Address-fn::getatt"></a>
  The DNS hostname of the cache node\.  
@@ -4181,7 +4082,6 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 
 
-#### 
 
 `EndpointURL`  
 For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.  
@@ -4202,7 +4102,6 @@ Example instance IP address:
 
 
 
-#### 
 
 `CanonicalHostedZoneName`  
 The name of the Route 53 hosted zone that is associated with the load balancer\. Internal\-facing load balancers don't use this value, use `DNSName` instead\.
@@ -4247,7 +4146,6 @@ The owner of the source security group\.
 
 
 
-#### 
 
 `CanonicalHostedZoneID`  
 The ID of the Amazon Route 53 hosted zone associated with the load balancer\. For example, `Z2P70J7EXAMPLE`\.
@@ -4276,7 +4174,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `LoadBalancerArns`  
 The Amazon Resource Names \(ARNs\) of the load balancers that route traffic to this target group\.
@@ -4296,7 +4193,6 @@ The name of the target group\. For example, `my-target-group`\.
 ### Fn::GetAtt
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`\. This returned value is the same as the one returned by `AWS::Elasticsearch::Domain.DomainArn`\.
@@ -4319,7 +4215,6 @@ When you provide the logical ID of this resource to the `Ref` intrinsic function
 
 
 
-#### 
 
 `DiscovererArn`  
 The ARN of the discoverer\.
@@ -4345,7 +4240,6 @@ Returns a value similar to the following:
 
 
 
-#### 
 
 `RegistryArn`  
 The ARN of the registry\.
@@ -4364,7 +4258,6 @@ When you provide the logical ID of this resource to the `Ref` intrinsic function
 
 
 
-#### 
 
 `Id`  
 The ID of the policy\.
@@ -4387,7 +4280,6 @@ Returns a value similar to the following:
 
 
 
-#### 
 
 `SchemaArn`  
 The ARN of the schema\.
@@ -4409,7 +4301,6 @@ The name of the new event bus\.
 
 The ARN of the task definition to use\. If no task revision is supplied, it defaults to the most recent revision at the time of resource creation\.
 
-#### 
 
 `Arn`  
 The ARN of the event bus, such as `arn:aws:events:us-east-2:123456789012:event-bus/aws.partner/PartnerName/acct1/repo1`\.
@@ -4438,7 +4329,6 @@ The policy for the event bus in JSON form\.
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example`\.
@@ -4465,7 +4355,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the policy\.
@@ -4489,7 +4378,6 @@ For the Amazon FSx file system `fs-01234567890123456`, Ref returns the file syst
 
 
 
-#### 
 
 `LustreMountName`  
 Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
@@ -4504,7 +4392,6 @@ Use the LustreMountName value when mounting an Amazon FSx for Lustre file system
 
 ### Fn::GetAtt
 
-#### 
 
 `AliasId`  
 Not currently supported by AWS CloudFormation\.
@@ -4537,7 +4424,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `AutoScalingGroupArn`  
 Not currently supported by AWS CloudFormation\.
@@ -4557,7 +4443,6 @@ The unique Amazon Resource Name \(ARN\) assigned to the game server group\.
 
 
 
-#### 
 
 `Arn`  
  The unique Amazon Resource Name \(ARN\) for the `GameSessionQueue`\.
@@ -4577,7 +4462,6 @@ A descriptive label that is associated with a game session queue\. Names are uni
 
 
 
-#### 
 
 `Arn`  
  The unique Amazon Resource Name \(ARN\) for the `MatchmakingConfiguration`\.
@@ -4597,7 +4481,6 @@ A descriptive label that is associated with a game session queue\. Names are uni
 
 
 
-#### 
 
 `Arn`  
 The unique Amazon Resource Name \(ARN\) assigned to the rule set\.
@@ -4617,7 +4500,6 @@ The unique name of the rule set\.
 
 
 
-#### 
 
 `Arn`  
 The unique Amazon Resource Name \(ARN\) for the script\.
@@ -4637,7 +4519,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AcceleratorArn`  
 The ARN of the accelerator, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh`\.
@@ -4657,7 +4538,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `EndpointGroupArn`  
 The ARN of the endpoint group, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`\.
@@ -4674,7 +4554,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ListenerArn`  
 The ARN of the listener, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz`\.
@@ -4781,7 +4660,6 @@ The ARN of the listener, such as `arn:aws:globalaccelerator::012345678901:accele
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `ConnectorDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/connectors/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4815,7 +4693,6 @@ The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `CoreDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/cores/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4849,7 +4726,6 @@ The name of the `CoreDefinition`, such as `MyCoreDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `DeviceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/devices/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4883,7 +4759,6 @@ The name of the device definition\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `FunctionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/functions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4917,7 +4792,6 @@ The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The ARN of the `Group`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/groups/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4957,7 +4831,6 @@ The time \(in milliseconds since the epoch\) when the group role was attached to
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `LoggerDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -4991,7 +4864,6 @@ The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `ResourceDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/resources/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\.
@@ -5025,7 +4897,6 @@ The name of the `ResourceDefinition`, such as `MyResourceDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the `SubscriptionDefinition`, such as `arn:aws:greengrass:us-east-1:123456789012:/greengrass/definition/subscriptions/1234a5b6-78cd-901e-2fgh-3i45j6k178l9`\. 
@@ -5063,7 +4934,6 @@ The name of the `SubscriptionDefinition`, such as `MySubscriptionDefinition`\.
 
 
 
-#### 
 
 `Arn`  
 The ARN of the config, such as `arn:aws:groundstation:us-east-2:1234567890:config/tracking/9940bf3b-d2ba-427e-9906-842b5e5d2296`\. 
@@ -5089,7 +4959,6 @@ The type of the config, such as `tracking`\.
 
 
 
-#### 
 
 `Arn`  
 The ARN of the dataflow endpoint group, such as `arn:aws:groundstation:us-east-2:1234567890:dataflow-endpoint-group/9940bf3b-d2ba-427e-9906-842b5e5d2296`\. 
@@ -5112,7 +4981,6 @@ The ARN of the dataflow endpoint group, such as `arn:aws:groundstation:us-east-2
 
 
 
-#### 
 
 `Arn`  
 The ARN of the mission profile, such as `arn:aws:groundstation:us-east-2:1234567890:mission-profile/9940bf3b-d2ba-427e-9906-842b5e5d2296`\. 
@@ -5183,7 +5051,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `SecretAccessKey`  
 Returns the secret access key for the specified AWS::IAM::AccessKey resource\. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY\.
@@ -5200,7 +5067,6 @@ Returns the secret access key for the specified AWS::IAM::AccessKey resource\. F
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
@@ -5221,7 +5087,6 @@ For the `AWS::IAM::InstanceProfile` resource with the logical ID `MyProfile`, Re
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
@@ -5266,7 +5131,6 @@ For the `AWS::IAM::Role` resource with the logical ID `RootRole`, `Ref` will ret
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the role\. For example:  
@@ -5303,7 +5167,6 @@ For the `AWS::IAM::ServiceLinkedRole` resource with the logical ID `BasicSLR`, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::User` resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
@@ -5334,7 +5197,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the component\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
@@ -5357,7 +5219,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
@@ -5374,7 +5235,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
@@ -5394,7 +5254,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
@@ -5411,7 +5270,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
@@ -5428,7 +5286,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
@@ -5445,7 +5302,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the assessment target that is created\.
@@ -5462,7 +5318,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the assessment template that is created\.
@@ -5479,7 +5334,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) that specifies the resource group that is created\.
@@ -5491,7 +5345,6 @@ The Amazon Resource Name \(ARN\) that specifies the resource group that is creat
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 Not currently supported by AWS CloudFormation\.
@@ -5513,7 +5366,6 @@ A value similar to the following is returned:
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:  
@@ -5537,7 +5389,6 @@ The certificate ID\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-east-2:123456789012:policy/MyPolicy`\.
@@ -5559,7 +5410,6 @@ For a stack named MyStack, a value similar to the following is returned:
 
 
 
-#### 
 
 `TemplateArn`  
 The ARN that identifies the provisioning template\.
@@ -5595,7 +5445,6 @@ For a stack named My\-Stack \(the \- character is omitted\), a value similar to 
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS IoT rule, such as `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`\.
@@ -5612,7 +5461,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The ARN of the device, such as `arn:aws:iot1click:us-west-2:123456789012:devices/G030PX0312744DWM`\.
@@ -5635,7 +5483,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `PlacementName`  
 The name of the placement, such as `floor17`\.
@@ -5655,7 +5502,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the project, such as `arn:aws:iot1click:us-east-1:123456789012:projects/project-a1bzhi`\.
@@ -5714,7 +5560,6 @@ For the AWS IoT Events input `myInput`, `Ref` returns the name of the input\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS KMS customer master key \(CMK\), such as `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`\.  
@@ -5738,7 +5583,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the data source\. For example:  
@@ -5761,7 +5605,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 `arn:aws:kendra:us-west-2:111122223333:index/335c3741-41df-46a6-b5d3-61f85b787884/faq/f61995a6-cd5c-4e99-9cfc-58816d8bfaa7`
@@ -5783,7 +5626,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the index\. For example: `arn:aws:kendra:us-west-2:111122223333:index/0123456789abcdef`\.
@@ -5803,7 +5645,6 @@ The identifier for the index\. For example: `f4aeaa10-8056-4b2c-a343-522ca0f4123
  `Fn::GetAtt` returns a value for the `Arn` attribute\.
 
 
-#### 
 
 `Arn`  
 The Amazon resource name \(ARN\) of the Kinesis stream, such as `arn:aws:kinesis:us-east-2:123456789012:stream/mystream`\.
@@ -5820,7 +5661,6 @@ When you pass the logical ID of an `AWS::Kinesis::StreamConsumer` resource to th
 
 
 
-#### 
 
 `ConsumerARN`  
 When you register a consumer, Kinesis Data Streams generates an ARN for it\. You need this ARN to be able to call [SubscribeToShard](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_SubscribeToShard.html)\.   
@@ -5850,7 +5690,6 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the delivery stream, such as `arn:aws:firehose:us-east-2:123456789012:deliverystream/delivery-stream-name`\. 
@@ -5880,7 +5719,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Fn::GetAtt
 
-#### 
 
 `Id`  
 Not currently supported by AWS CloudFormation\.
@@ -5897,7 +5735,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the function\.
@@ -5930,7 +5767,6 @@ The Amazon Resource Name \(ARN\) of the function\.
 
 
 
-#### 
 
 `Version`  
 The version number\.
@@ -5947,7 +5783,6 @@ The version number\.
 
 
 
-#### 
 
 `Arn`  
 The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:123456789012:destination:MyDestination`\.
@@ -5964,7 +5799,6 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:1234
 
 
 
-#### 
 
 `Arn`  
 The ARN of the log group, such as `arn:aws:logs:us-west-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*`
@@ -6008,7 +5842,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the custom data identifier\.
@@ -6033,7 +5866,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the filter\.
@@ -6056,7 +5888,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `AwsAccountId`  
 The account ID for the AWS account in which the `Session` is created\.
@@ -6076,7 +5907,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `MemberId`  
 The unique identifier of the member\.
@@ -6096,7 +5926,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the node\.
@@ -6122,7 +5951,6 @@ When you pass the logical ID of an `AWS::MediaConvert::JobTemplate` resource to 
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the job template, such as `arn:aws:mediaconvert:us-west-2:123456789012`\.
@@ -6140,7 +5968,6 @@ When you pass the logical ID of an `AWS::MediaConvert::Preset` resource to the i
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
  The Amazon Resource Name \(ARN\) of the output preset, such as `arn:aws:mediaconvert:us-west-2:123456789012`\. 
@@ -6160,7 +5987,6 @@ When you pass the logical ID of an `AWS::MediaConvert::Queue` resource to the in
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the queue, such as `arn:aws:mediaconvert:us-west-2:123456789012`\.
@@ -6181,7 +6007,6 @@ For example: `{ "Ref": "myChannel" }`
 
 
 
-#### 
 
 `Arn`  
 The ARN of the MediaLive channel\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:channel:1234567
@@ -6204,7 +6029,6 @@ For example: `{ "Ref": "1234567" }`
 
 The IP addresses are in a string format that shows a list\. For example `[rtp://203.0.113.28:5000, rtp://203.0.113.33:5005]`
 
-#### 
 
 `Arn`  
 The ARN of the MediaLive input\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:input:1234567\. MediaLive creates this ARN when it creates the input\. 
@@ -6228,7 +6052,6 @@ For example: `{ "Ref": "myInputSecurityGroup" }`
 
 
 
-#### 
 
 `Arn`  
 The ARN of the MediaLive input security group\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:inputSecurityGroup:1234567
@@ -6246,7 +6069,6 @@ For example: `{ "Ref": "myContainer" }`
 
 
 
-#### 
 
 `Endpoint`  
 The DNS endpoint of the container\. Use the endpoint to identify the specific container when sending requests to the data plane\. The service assigns this value when the container is created\. Once the value has been assigned, it does not change\.
@@ -6262,7 +6084,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ClusterResourceId`  
 The resource id for the DB cluster\. For example: `cluster-ABCD1234EFGH5678IJKL90MNOP`\. The cluster ID uniquely identifies the cluster and is used in things like IAM authentication policies\.
@@ -6294,7 +6115,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Endpoint`  
 The connection endpoint for the database\. For example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com`\.
@@ -6335,7 +6155,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `DeviceArn`  
 The ARN of the device\. For example, `arn:aws:networkmanager::123456789012:device/global-network-01231231231231231/device-07f6fd08867abc123`\.
@@ -6355,7 +6174,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The ARN of the global network\. For example, `arn:aws:networkmanager::123456789012:global-network/global-network-01231231231231231`\.
@@ -6375,7 +6193,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `LinkArn`  
 The ARN of the link\. For example, `arn:aws:networkmanager::123456789012:link/global-network-01231231231231231/link-11112222aaaabbbb1`\.
@@ -6403,7 +6220,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `SiteArn`  
 The ARN of the site\. For example, `arn:aws:networkmanager::123456789012:site/global-network-01231231231231231/site-444555aaabbb11223`\.
@@ -6447,7 +6263,6 @@ For the AWS OpsWorks instance *myInstance1*, `Ref` returns the AWS OpsWorks inst
 
 
 
-#### 
 
 `AvailabilityZone`  
 The Availability Zone of the AWS OpsWorks instance, such as `us-east-2a`\.
@@ -6501,7 +6316,6 @@ For the AWS OpsWorks stack *myStack*, `Ref` returns the AWS OpsWorks stack ID\.
 
 
 
-#### 
 
 `SshUsername`  
 The user's SSH user name, as a string\.
@@ -6526,7 +6340,6 @@ The user's SSH user name, as a string\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`\.
@@ -6584,7 +6397,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the application\.
@@ -6614,7 +6426,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the campaign\.
@@ -6640,7 +6451,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the message template\.
@@ -6670,7 +6480,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the message template\.
@@ -6693,7 +6502,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the segment\.
@@ -6712,7 +6520,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the message template\.
@@ -6772,7 +6579,6 @@ For the Amazon Pinpoint identity `myEmailIdentity`, Ref returns the name of the 
 
 
 
-#### 
 
 `IdentityDNSRecordName1`  
 The host name for the first token that you have to add to the DNS configuration for your domain\.  
@@ -6821,7 +6627,6 @@ For the resource with the logical ID `myQLDBStream`, `Ref` returns the ID or ARN
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the QLDB journal stream\. For example: `arn:aws:qldb:us-east-1:123456789012:stream/exampleLedger/IiPT4brpZCqCq3f4MTHbYy`\.
@@ -6841,7 +6646,6 @@ The unique ID that QLDB assigns to each QLDB journal stream\. For example: `IiPT
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the resource share\.
@@ -6858,7 +6662,6 @@ The Amazon Resource Name \(ARN\) of the resource share\.
 
 
 
-#### 
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
@@ -6889,7 +6692,6 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 
 
 
-#### 
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the database\. For example: `mystack-mydb-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
@@ -6915,7 +6717,6 @@ The port number on which the database accepts connections\. For example: `3306`
 
 ### Fn::GetAtt
 
-#### 
 
 `DBProxyArn`  
 The Amazon Resource Name \(ARN\) representing the target group\.
@@ -6933,7 +6734,6 @@ The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
 ### Fn::GetAtt
 
-#### 
 
 `TargetGroupArn`  
 The Amazon Resource Name \(ARN\) representing the target group\.
@@ -6992,7 +6792,6 @@ For the Amazon Redshift cluster `myCluster`, `Ref` returns the name of the clust
 
 
 
-#### 
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.
@@ -7045,7 +6844,6 @@ The name of a resource group\.
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The ARN of a resource group\.
@@ -7062,7 +6860,6 @@ When you pass the logical ID of an `AWS::RoboMaker::Fleet` resource to the intri
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\.
@@ -7087,7 +6884,6 @@ When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource t
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the robot application\.
@@ -7115,7 +6911,6 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplication` resou
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the simulation application\.
@@ -7141,7 +6936,6 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion
 
 ### Fn::GetAtt
 
-#### 
 
 `HealthCheckId`  
 Not currently supported by AWS CloudFormation\.
@@ -7158,7 +6952,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `NameServers`  
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  
@@ -7192,7 +6985,6 @@ This attribute is not supported for private hosted zones\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
@@ -7226,7 +7018,6 @@ For example: `{ "Ref": "rqlc-1111222233334444" }`
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) for the query logging configuration\.
@@ -7271,7 +7062,6 @@ For example: `{ "Ref": "rqlca-1111222233334444" }`
 
 
 
-#### 
 
 `CreationTime`  
 The date and time that the VPC was associated with the query logging configuration, in Unix time format and Coordinated Universal Time \(UTC\)\.
@@ -7306,7 +7096,6 @@ The status of the specified query logging association\. Valid values include the
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi`\.
@@ -7338,7 +7127,6 @@ When the value of `RuleType` is `FORWARD`, the IP addresses that the outbound en
 
 
 
-#### 
 
 `Name`  
 The name of an association between a resolver rule and a VPC, such as `test.example.com in beta VPC`\.
@@ -7373,7 +7161,6 @@ Example: `DOC-EXAMPLE-BUCKET`
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
@@ -7440,7 +7227,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `TopicName`  
 Returns the name of an Amazon SNS topic\.
@@ -7459,7 +7245,6 @@ Returns the name of an Amazon SNS topic\.
 
 
 
-#### 
 
 `Arn`  
 Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sqs:us-east-2:123456789012:mystack-myqueue-15PG5C2FC1CW8`\.
@@ -7472,7 +7257,6 @@ Returns the queue name\. For example: `mystack-myqueue-1VF9BKQH5BJVI`\.
 
 ### Fn::GetAtt
 
-#### 
 
 `AssociationId`  
 Not currently supported by AWS CloudFormation\.
@@ -7521,7 +7305,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `Type`  
 Returns the type of the parameter\. Valid values are `String` or `StringList`\.
@@ -7568,7 +7351,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `PermissionSetArn`  
 The permission set ARN of the permission set, such as `arn:aws:sso:::permissionSet/ins-instanceid/ps-permissionsetid`\.
@@ -7580,7 +7362,6 @@ The permission set ARN of the permission set, such as `arn:aws:sso:::permissionS
 
 ### Fn::GetAtt
 
-#### 
 
 `CodeRepositoryName`  
 Not currently supported by AWS CloudFormation\.
@@ -7597,7 +7378,6 @@ Not currently supported by AWS CloudFormation\.
 
 
 
-#### 
 
 `EndpointName`  
 The name of the endpoint, such as `MyEndpoint`\. 
@@ -7615,7 +7395,6 @@ The name of the endpoint, such as `MyEndpoint`\.
 
 
 
-#### 
 
 `EndpointConfigName`  
 The name of the endpoint configuration, such as `MyEndpointConfiguration`\.
@@ -7635,7 +7414,6 @@ When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intri
 
 
 
-#### 
 
 `ModelName`  
 The name of the model, such as `MyModel`\.
@@ -7661,7 +7439,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `NotebookInstanceName`  
 The name of the notebook instance, such as `MyNotebookInstance`\.
@@ -7679,7 +7456,6 @@ The name of the notebook instance, such as `MyNotebookInstance`\.
 
 
 
-#### 
 
 `NotebookInstanceLifecycleConfigName`  
 The name of the lifecycle configuration, such as `MyLifecycleConfig`\.
@@ -7691,7 +7467,6 @@ The name of the lifecycle configuration, such as `MyLifecycleConfig`\.
 
 ### Fn::GetAtt
 
-#### 
 
 `WorkteamName`  
 Not currently supported by AWS CloudFormation\.
@@ -7771,7 +7546,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `ProductName`  
 The name of the product\.
@@ -7794,7 +7568,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `CloudformationStackArn`  
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
@@ -7844,7 +7617,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `PortfolioName`  
 The name of the portfolio\.
@@ -7916,7 +7688,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the namespace, such as `arn:aws:service-discovery:us-east-1:123456789012:http-namespace/http-namespace-a1bzhi`\.
@@ -7944,7 +7715,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the private namespace\.
@@ -7964,7 +7734,6 @@ The ID of the private namespace\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the public namespace\.
@@ -7984,7 +7753,6 @@ The ID of the public namespace\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the service\.
@@ -8012,7 +7780,6 @@ Returns a value similar to the following:
 ### Fn::GetAtt
 
 
-#### 
 
 `Name`  
 Returns the name of the activity\. For example:  
@@ -8037,7 +7804,6 @@ Returns a value similar to the following:
 ### Fn::GetAtt
 
 
-#### 
 
 `Arn`  
 Not currently supported by AWS CloudFormation\.
@@ -8062,7 +7828,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-#### 
 
 `Id`  
 The ID of the canary\.
@@ -8082,7 +7847,6 @@ The state of the canary\. For example, `RUNNING`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name associated with the server, in the form `arn:aws:transfer:region:account-id:server/server-id/`\.  
@@ -8104,7 +7868,6 @@ An example `ServerId` is `s-01234567890abcdef`\.
 
 
 
-#### 
 
 `Arn`  
 The Amazon Resource Name associated with the user, in the form `arn:aws:transfer:region:account-id:user/server-id/username`\.  
@@ -8265,7 +8028,6 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the IP set\.
@@ -8284,7 +8046,6 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the regex pattern set\.
@@ -8303,7 +8064,6 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the rule group\.
@@ -8322,7 +8082,6 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
 
 ### Fn::GetAtt
 
-#### 
 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the web ACL\.
