@@ -11,7 +11,7 @@ function extractEntityFiles(repoArchive, dataDir) {
     const PROPERTIES_FILE_NAME_REGEX = /^aws-properties-.*\.md$/;
 
     yauzl.open(repoArchive, { lazyEntries: true }, function (err, repoZip) {
-      if (err) reject(err);
+      if (err) return reject(err);
       let numOfEntityFiles = 0;
       repoZip.readEntry();
       repoZip.on("entry", function (entry) {
@@ -21,14 +21,16 @@ function extractEntityFiles(repoArchive, dataDir) {
           repoZip.readEntry();
         } else {
           // File entry
-          fileEntry = entry.fileName.split("/").reverse()[0];
+          const fileEntry = entry.fileName.split("/").reverse()[0];
           // Extract only resource and properties files
           if (
             RESOURCE_FILE_NAME_REGEX.test(fileEntry) ||
             PROPERTIES_FILE_NAME_REGEX.test(fileEntry)
           ) {
             numOfEntityFiles++;
-            unzippedFile = fs.createWriteStream(dataDir + "/" + fileEntry);
+            const unzippedFile = fs.createWriteStream(
+              dataDir + "/" + fileEntry
+            );
             repoZip.openReadStream(entry, function (err, readStream) {
               if (err) throw err;
               readStream.on("end", function () {
