@@ -1,8 +1,7 @@
 const fs = require("fs");
 const readline = require("readline");
 
-function createAttributesFile(input, outputDir, indexFile) {
-  return new Promise(async (resolve) => {
+async function createAttributesFile(input, outputDir, indexFile) {
     const PAGE_START = "# ";
     const SECTION_START = "## ";
     // const RETURN_VALUES_SECTION_START = SECTION_START + "Return Values";
@@ -66,8 +65,6 @@ function createAttributesFile(input, outputDir, indexFile) {
         }
       });
     }
-    resolve();
-  });
 }
 
 async function createAttributeFiles(inputDir, outputDir) {

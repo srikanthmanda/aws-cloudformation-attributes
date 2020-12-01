@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
+    "lint": "eslint src/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

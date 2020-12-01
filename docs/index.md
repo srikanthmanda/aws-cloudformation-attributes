@@ -148,7 +148,9 @@
 * [AWS::CloudFront::CachePolicy](#awscloudfrontcachepolicy)
 * [AWS::CloudFront::CloudFrontOriginAccessIdentity](#awscloudfrontcloudfrontoriginaccessidentity)
 * [AWS::CloudFront::Distribution](#awscloudfrontdistribution)
+* [AWS::CloudFront::KeyGroup](#awscloudfrontkeygroup)
 * [AWS::CloudFront::OriginRequestPolicy](#awscloudfrontoriginrequestpolicy)
+* [AWS::CloudFront::PublicKey](#awscloudfrontpublickey)
 * [AWS::CloudFront::RealtimeLogConfig](#awscloudfrontrealtimelogconfig)
 * [AWS::CloudFront::StreamingDistribution](#awscloudfrontstreamingdistribution)
 
@@ -160,6 +162,11 @@
 * [AWS::CloudWatch::CompositeAlarm](#awscloudwatchcompositealarm)
 * [AWS::CloudWatch::Dashboard](#awscloudwatchdashboard)
 * [AWS::CloudWatch::InsightRule](#awscloudwatchinsightrule)
+* [AWS::CloudWatch::MetricStream](#awscloudwatchmetricstream)
+
+### AWS::CodeArtifact
+* [AWS::CodeArtifact::Domain](#awscodeartifactdomain)
+* [AWS::CodeArtifact::Repository](#awscodeartifactrepository)
 
 ### AWS::CodeBuild
 * [AWS::CodeBuild::Project](#awscodebuildproject)
@@ -233,6 +240,13 @@
 * [AWS::DMS::ReplicationInstance](#awsdmsreplicationinstance)
 * [AWS::DMS::ReplicationSubnetGroup](#awsdmsreplicationsubnetgroup)
 * [AWS::DMS::ReplicationTask](#awsdmsreplicationtask)
+
+### AWS::DataBrew
+* [AWS::DataBrew::Dataset](#awsdatabrewdataset)
+* [AWS::DataBrew::Job](#awsdatabrewjob)
+* [AWS::DataBrew::Project](#awsdatabrewproject)
+* [AWS::DataBrew::Recipe](#awsdatabrewrecipe)
+* [AWS::DataBrew::Schedule](#awsdatabrewschedule)
 
 ### AWS::DataPipeline
 * [AWS::DataPipeline::Pipeline](#awsdatapipelinepipeline)
@@ -345,6 +359,7 @@
 
 ### AWS::ElastiCache
 * [AWS::ElastiCache::CacheCluster](#awselasticachecachecluster)
+* [AWS::ElastiCache::GlobalReplicationGroup](#awselasticacheglobalreplicationgroup)
 * [AWS::ElastiCache::ParameterGroup](#awselasticacheparametergroup)
 * [AWS::ElastiCache::ReplicationGroup](#awselasticachereplicationgroup)
 * [AWS::ElastiCache::SecurityGroup](#awselasticachesecuritygroup)
@@ -376,6 +391,7 @@
 * [AWS::EventSchemas::Schema](#awseventschemasschema)
 
 ### AWS::Events
+* [AWS::Events::Archive](#awseventsarchive)
 * [AWS::Events::EventBus](#awseventseventbus)
 * [AWS::Events::EventBusPolicy](#awseventseventbuspolicy)
 * [AWS::Events::Rule](#awseventsrule)
@@ -412,6 +428,10 @@
 * [AWS::Glue::Job](#awsgluejob)
 * [AWS::Glue::MLTransform](#awsgluemltransform)
 * [AWS::Glue::Partition](#awsgluepartition)
+* [AWS::Glue::Registry](#awsglueregistry)
+* [AWS::Glue::Schema](#awsglueschema)
+* [AWS::Glue::SchemaVersion](#awsglueschemaversion)
+* [AWS::Glue::SchemaVersionMetadata](#awsglueschemaversionmetadata)
 * [AWS::Glue::SecurityConfiguration](#awsgluesecurityconfiguration)
 * [AWS::Glue::Table](#awsgluetable)
 * [AWS::Glue::Trigger](#awsgluetrigger)
@@ -459,6 +479,11 @@
 * [AWS::IAM::User](#awsiamuser)
 * [AWS::IAM::UserToGroupAddition](#awsiamusertogroupaddition)
 
+### AWS::IVS
+* [AWS::IVS::Channel](#awsivschannel)
+* [AWS::IVS::PlaybackKeyPair](#awsivsplaybackkeypair)
+* [AWS::IVS::StreamKey](#awsivsstreamkey)
+
 ### AWS::ImageBuilder
 * [AWS::ImageBuilder::Component](#awsimagebuildercomponent)
 * [AWS::ImageBuilder::DistributionConfiguration](#awsimagebuilderdistributionconfiguration)
@@ -475,10 +500,12 @@
 ### AWS::IoT
 * [AWS::IoT::Authorizer](#awsiotauthorizer)
 * [AWS::IoT::Certificate](#awsiotcertificate)
+* [AWS::IoT::DomainConfiguration](#awsiotdomainconfiguration)
 * [AWS::IoT::Policy](#awsiotpolicy)
 * [AWS::IoT::ProvisioningTemplate](#awsiotprovisioningtemplate)
 * [AWS::IoT::Thing](#awsiotthing)
 * [AWS::IoT::TopicRule](#awsiottopicrule)
+* [AWS::IoT::TopicRuleDestination](#awsiottopicruledestination)
 
 ### AWS::IoT1Click
 * [AWS::IoT1Click::Device](#awsiot1clickdevice)
@@ -488,6 +515,15 @@
 ### AWS::IoTEvents
 * [AWS::IoTEvents::DetectorModel](#awsioteventsdetectormodel)
 * [AWS::IoTEvents::Input](#awsioteventsinput)
+
+### AWS::IoTSiteWise
+* [AWS::IoTSiteWise::AccessPolicy](#awsiotsitewiseaccesspolicy)
+* [AWS::IoTSiteWise::Asset](#awsiotsitewiseasset)
+* [AWS::IoTSiteWise::AssetModel](#awsiotsitewiseassetmodel)
+* [AWS::IoTSiteWise::Dashboard](#awsiotsitewisedashboard)
+* [AWS::IoTSiteWise::Gateway](#awsiotsitewisegateway)
+* [AWS::IoTSiteWise::Portal](#awsiotsitewiseportal)
+* [AWS::IoTSiteWise::Project](#awsiotsitewiseproject)
 
 ### AWS::IoTThingsGraph
 * [AWS::IoTThingsGraph::FlowTemplate](#awsiotthingsgraphflowtemplate)
@@ -510,6 +546,7 @@
 
 ### AWS::Lambda
 * [AWS::Lambda::Alias](#awslambdaalias)
+* [AWS::Lambda::CodeSigningConfig](#awslambdacodesigningconfig)
 * [AWS::Lambda::EventInvokeConfig](#awslambdaeventinvokeconfig)
 * [AWS::Lambda::EventSourceMapping](#awslambdaeventsourcemapping)
 * [AWS::Lambda::Function](#awslambdafunction)
@@ -545,6 +582,13 @@
 * [AWS::MediaLive::Input](#awsmedialiveinput)
 * [AWS::MediaLive::InputSecurityGroup](#awsmedialiveinputsecuritygroup)
 
+### AWS::MediaPackage
+* [AWS::MediaPackage::Asset](#awsmediapackageasset)
+* [AWS::MediaPackage::Channel](#awsmediapackagechannel)
+* [AWS::MediaPackage::OriginEndpoint](#awsmediapackageoriginendpoint)
+* [AWS::MediaPackage::PackagingConfiguration](#awsmediapackagepackagingconfiguration)
+* [AWS::MediaPackage::PackagingGroup](#awsmediapackagepackaginggroup)
+
 ### AWS::MediaStore
 * [AWS::MediaStore::Container](#awsmediastorecontainer)
 
@@ -554,6 +598,12 @@
 * [AWS::Neptune::DBInstance](#awsneptunedbinstance)
 * [AWS::Neptune::DBParameterGroup](#awsneptunedbparametergroup)
 * [AWS::Neptune::DBSubnetGroup](#awsneptunedbsubnetgroup)
+
+### AWS::NetworkFirewall
+* [AWS::NetworkFirewall::Firewall](#awsnetworkfirewallfirewall)
+* [AWS::NetworkFirewall::FirewallPolicy](#awsnetworkfirewallfirewallpolicy)
+* [AWS::NetworkFirewall::LoggingConfiguration](#awsnetworkfirewallloggingconfiguration)
+* [AWS::NetworkFirewall::RuleGroup](#awsnetworkfirewallrulegroup)
 
 ### AWS::NetworkManager
 * [AWS::NetworkManager::CustomerGatewayAssociation](#awsnetworkmanagercustomergatewayassociation)
@@ -619,6 +669,7 @@
 * [AWS::RDS::DBSecurityGroupIngress](#awsrdsdbsecuritygroupingress)
 * [AWS::RDS::DBSubnetGroup](#awsrdsdbsubnetgroup)
 * [AWS::RDS::EventSubscription](#awsrdseventsubscription)
+* [AWS::RDS::GlobalCluster](#awsrdsglobalcluster)
 * [AWS::RDS::OptionGroup](#awsrdsoptiongroup)
 
 ### AWS::Redshift
@@ -654,12 +705,14 @@
 ### AWS::S3
 * [AWS::S3::AccessPoint](#awss3accesspoint)
 * [AWS::S3::Bucket](#awss3bucket)
+* [AWS::S3::StorageLens](#awss3storagelens)
 
 ### AWS::SDB
 * [AWS::SDB::Domain](#awssdbdomain)
 
 ### AWS::SES
 * [AWS::SES::ConfigurationSet](#awssesconfigurationset)
+* [AWS::SES::ContactList](#awssescontactlist)
 * [AWS::SES::ReceiptRule](#awssesreceiptrule)
 * [AWS::SES::ReceiptRuleSet](#awssesreceiptruleset)
 
@@ -732,6 +785,10 @@
 ### AWS::Synthetics
 * [AWS::Synthetics::Canary](#awssyntheticscanary)
 
+### AWS::Timestream
+* [AWS::Timestream::Database](#awstimestreamdatabase)
+* [AWS::Timestream::Table](#awstimestreamtable)
+
 ### AWS::Transfer
 * [AWS::Transfer::Server](#awstransferserver)
 * [AWS::Transfer::User](#awstransferuser)
@@ -765,6 +822,7 @@
 * [AWS::WAFv2::WebACLAssociation](#awswafv2webaclassociation)
 
 ### AWS::WorkSpaces
+* [AWS::WorkSpaces::ConnectionAlias](#awsworkspacesconnectionalias)
 * [AWS::WorkSpaces::Workspace](#awsworkspacesworkspace)
 
 ## AWS::ACMPCA::Certificate
@@ -863,7 +921,7 @@ The revision number of the configuration\.
  `1` 
 
 `IpAddresses`  
-The IP addresses of each broker instance as a list of strings\.  
+The IP addresses of each broker instance as a list of strings\. Does not apply to RabbitMQ brokers\.  
  `['198.51.100.2', '203.0.113.9']` 
 
 `MqttEndpoints`  
@@ -1299,9 +1357,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 `ConnectorProfileArn`  
-The unique name of the connector profile\.
-
-`CredentialsArn`  
 Not currently supported by AWS CloudFormation\.
 
 
@@ -2095,6 +2150,24 @@ The Amazon S3 canonical user ID for the origin access identity, used when giving
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 
+## AWS::CloudFront::KeyGroup
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the key group\. For example: `e9fcd3cf-f3f4-4b61-bd85-9ba9e091b309`\.
+
+
+### Fn::GetAtt
+
+
+
+
+`Id`  
+The identifier for the key group\.
+
+`LastModifiedTime`  
+The date and time when the key group was last modified\.
+
 ## AWS::CloudFront::OriginRequestPolicy
 
 ### Ref
@@ -2112,6 +2185,24 @@ The unique identifier for the origin request policy\. For example: `befd7079-9bb
 
 `LastModifiedTime`  
 The date and time when the origin request policy was last modified\.
+
+## AWS::CloudFront::PublicKey
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the public key\. For example: `K36X4X2EO997HM`\.
+
+
+### Fn::GetAtt
+
+
+
+
+`CreatedTime`  
+The date and time when the public key was uploaded\.
+
+`Id`  
+The identifier of the public key\.
 
 ## AWS::CloudFront::RealtimeLogConfig
 
@@ -2220,6 +2311,74 @@ The ARN of the Contributor Insights rule, such as `arn:aws:cloudwatch:us-west-2:
 
 `RuleName`  
 The name of the Contributor Insights rule\.
+
+## AWS::CloudWatch::MetricStream
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+Not currently supported by AWS CloudFormation\.
+
+`CreationDate`  
+Not currently supported by AWS CloudFormation\.
+
+`LastUpdateDate`  
+Not currently supported by AWS CloudFormation\.
+
+`State`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::CodeArtifact::Domain
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource arn\.
+
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+When you pass the logical ID of this resource, the function returns the Amazon Resource Name \(ARN\) of the domain\. 
+
+`EncryptionKey`  
+When you pass the logical ID of this resource, the function returns the key used to encrypt the domain\.
+
+`Name`  
+When you pass the logical ID of this resource, the function returns the name of the domain\.
+
+`Owner`  
+When you pass the logical ID of this resource, the function returns the 12\-digit account number of the AWS account that owns the domain\.
+
+
+## AWS::CodeArtifact::Repository
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource arn\.
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+When you pass the logical ID of this resource, the function returns the Amazon Resource Name \(ARN\) of the repository\. 
+
+`DomainName`  
+When you pass the logical ID of this resource, the function returns the domain name that contains the repository\.
+
+`DomainOwner`  
+When you pass the logical ID of this resource, the function returns the 12\-digit account number of the AWS account that owns the domain that contains the repository\.
+
+`Name`  
+When you pass the logical ID of this resource, the function returns the name of the repository\.
+
 
 ## AWS::CodeBuild::Project
 
@@ -2801,6 +2960,61 @@ One or more public IP addresses for the replication instance\.
 
 
 
+## AWS::DataBrew::Dataset
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "myDataset" }` 
+
+For an AWS Glue DataBrew dataset named `myDataset`, `Ref` returns the name of the dataset\. 
+
+
+## AWS::DataBrew::Job
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "myJob" }` 
+
+For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
+
+
+## AWS::DataBrew::Project
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "myProject" }` 
+
+For an AWS Glue DataBrew project named `myProject`,  `Ref` returns the name of the project\. 
+
+
+## AWS::DataBrew::Recipe
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "myRecipe" }` 
+
+For an AWS Glue DataBrew recipe named `myRecipe`, `Ref` returns the name of the recipe\. 
+
+
+## AWS::DataBrew::Schedule
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+
+ `{ "Ref": "mySchedule" }` 
+
+For an AWS Glue DataBrew schedule named `mySchedule`,  `Ref` returns the name of the schedule\. 
+
+
 ## AWS::DataPipeline::Pipeline
 
 ### Ref
@@ -2965,9 +3179,6 @@ The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamod
 `StreamArn`  
 The ARN of the DynamoDB stream, such as `arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`\.   
 You must specify the `StreamSpecification` property to use this attribute\.
-
-`TableId`  
-Not currently supported by AWS CloudFormation\.
 
 
 ## AWS::EC2::CapacityReservation
@@ -3387,6 +3598,9 @@ The IPv6 CIDR blocks that are associated with the subnet, such as `[ 2001:db8:12
 
 `NetworkAclAssociationId`  
 The ID of the network ACL that is associated with the subnet's VPC, such as `acl-5fb85d36`\.
+
+`OutpostArn`  
+The Amazon Resource Name \(ARN\) of the Outpost\.
 
 `VpcId`  
 The ID of the subnet's VPC, such as `vpc-11ad4878`\.
@@ -3906,7 +4120,7 @@ The name associated with an Amazon EKS managed node group\.
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the cluster ID, such as j\-1ABCD123AB1A\.
 
 
 ### Fn::GetAtt
@@ -3922,14 +4136,14 @@ The public DNS name of the master node \(instance\), such as `ec2-12-123-123-123
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance fleet\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance fleet\.
 
 
 ## AWS::EMR::InstanceGroupConfig
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance group\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance group\.
 
 
 
@@ -3937,14 +4151,14 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the security configuration name, such as `mySecurityConfiguration`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the security configuration name, such as `mySecurityConfiguration`\.
 
 
 ## AWS::EMR::Step
 
 ### Ref
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the step\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the step\.
 
 
 ## AWS::ElastiCache::CacheCluster
@@ -3972,6 +4186,16 @@ The DNS address of the configuration endpoint for the Redis cache cluster\.
 `RedisEndpoint.Port`  <a name="RedisEndpoint.Port-fn::getatt"></a>
 The port number of the configuration endpoint for the Redis cache cluster\.
 
+
+## AWS::ElastiCache::GlobalReplicationGroup
+
+### Ref
+
+### Fn::GetAtt
+
+
+`GlobalReplicationGroupId`  
+The ID used to associate a secondary cluster to the Global Replication Group\.
 
 ## AWS::ElastiCache::ParameterGroup
 
@@ -4125,6 +4349,12 @@ The owner of the source security group\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the listener\.
 
+
+### Fn::GetAtt
+
+
+`ListenerArn`  
+Not currently supported by AWS CloudFormation\.
 
 
 ## AWS::ElasticLoadBalancingV2::ListenerRule
@@ -4289,6 +4519,24 @@ The name of the schema\.
 
 `SchemaVersion`  
 The version number of the schema\.
+
+
+## AWS::Events::Archive
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the archive name\.
+
+### Fn::GetAtt
+
+
+
+
+`ArchiveName`  
+The archive name\.
+
+`Arn`  
+The ARN of the archive created\.
 
 
 ## AWS::Events::EventBus
@@ -4622,6 +4870,46 @@ The ARN of the listener, such as `arn:aws:globalaccelerator::012345678901:accele
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the partition name\.
 
 
+
+## AWS::Glue::Registry
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a combination of "VersionId\|Key\|Value" as a string\.
+
+
+### Fn::GetAtt
+
+
+`Arn`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::Glue::Schema
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The Amazon Resource Name \(ARN\) of the schema\.
+
+`InitialSchemaVersionId`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::Glue::SchemaVersion
+
+### Ref
+
+### Fn::GetAtt
+
+
+`VersionId`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::Glue::SchemaVersionMetadata
+
+### Ref
 
 ## AWS::Glue::SecurityConfiguration
 
@@ -5186,6 +5474,79 @@ For the `AWS::IAM::UserToGroupAddition` resource with the logical ID `MyUserToGr
 
 
 
+## AWS::IVS::Channel
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the channel ARN\. For example:
+
+ `{ "Ref": "myChannel" }` 
+
+For the Amazon IVS channel `myChannel`, Ref returns the channel ARN\.
+
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+The channel ARN\. For example: `arn:aws:ivs:us-west-2:123456789012:channel/abcdABCDefgh`
+
+`IngestEndpoint`  
+Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software\.  
+For example: `a1b2c3d4e5f6.global-contribute.live-video.net`
+
+`PlaybackUrl`  
+Channel playback URL\. For example: `https://a1b2c3d4e5f6.us-west-2.playback.live-video.net/api/video/v1/us-west-2.123456789012.channel.abcdEFGH.m3u8`
+
+
+## AWS::IVS::PlaybackKeyPair
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the playback key pair ARN\. For example:
+
+ `{ "Ref": "myPlaybackKeyPair" }` 
+
+For the Amazon IVS playback key pair `myPlaybackKeyPair`, Ref returns the playback key pair ARN\.
+
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+Key\-pair ARN\. For example: `arn:aws:ivs:us-west-2:693991300569:playback-key/f99cde61-c2b0-4df3-8941-ca7d38acca1a`
+
+`Fingerprint`  
+Key\-pair identifier\. For example: `98:0d:1a:a0:19:96:1e:ea:0a:0a:2c:9a:42:19:2b:e7`
+
+
+## AWS::IVS::StreamKey
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\. For example:
+
+ `{ "Ref": "myStreamKey" }` 
+
+For the Amazon IVS stream key `myStreamKey`, Ref returns the stream key ARN\.
+
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+The stream\-key ARN\. For example: `arn:aws:ivs:us-west-2:123456789012:stream-key/g1H2I3j4k5L6`
+
+`Value`  
+The stream\-key value\. For example: `sk_us-west-2_abcdABCDefgh_567890abcdef`
+
+
 ## AWS::ImageBuilder::Component
 
 ### Ref
@@ -5241,6 +5602,9 @@ Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:im
 
 `ImageId`  
 Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder\.
+
+`Name`  
+Returns the name of the image\.
 
 
 ## AWS::ImageBuilder::ImagePipeline
@@ -5343,11 +5707,18 @@ The Amazon Resource Name \(ARN\) that specifies the resource group that is creat
 
 ### Ref
 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the authorizer name\. For example:
+
+ `{ "Ref": "MyAuthorizer" }` 
+
+
 ### Fn::GetAtt
 
 
+
+
 `Arn`  
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the authorizer\.
 
 ## AWS::IoT::Certificate
 
@@ -5375,6 +5746,29 @@ A value similar to the following is returned:
 
 `Id`  
 The certificate ID\.
+
+## AWS::IoT::DomainConfiguration
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the domain configuration name\. For example:
+
+ `{ "Ref": "MyDomainConfiguration" }` 
+
+
+### Fn::GetAtt
+
+
+
+
+`Arn`  
+The Amazon Resource Name \(ARN\) of the domain configuration\.
+
+`DomainType`  
+The type of service delivered by the domain\.
+
+`ServerCertificates`  
+The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake\. Currently you can specify only one certificate ARN\. This value is not required for AWS\-managed domains\.
 
 ## AWS::IoT::Policy
 
@@ -5449,6 +5843,25 @@ For a stack named My\-Stack \(the \- character is omitted\), a value similar to 
 `Arn`  
 The Amazon Resource Name \(ARN\) of the AWS IoT rule, such as `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule`\.
 
+
+## AWS::IoT::TopicRuleDestination
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the topic rule destination\. For example:
+
+ `{ "Ref": "TopicRuleDestination" }` 
+
+A value similar to the following is returned:
+
+ `a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
+
+
+### Fn::GetAtt
+
+
+`Arn`  
+The topic rule destination URL\.
 
 ## AWS::IoT1Click::Device
 
@@ -5533,6 +5946,109 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For the AWS IoT Events input `myInput`, `Ref` returns the name of the input\.
 
 
+
+## AWS::IoTSiteWise::AccessPolicy
+
+### Ref
+
+### Fn::GetAtt
+
+
+`AccessPolicyArn`  
+Not currently supported by AWS CloudFormation\.
+
+`AccessPolicyId`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::IoTSiteWise::Asset
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `AssetId`\.
+
+### Fn::GetAtt
+
+
+
+
+`AssetId`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::IoTSiteWise::AssetModel
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `AssetModelId`\.
+
+### Fn::GetAtt
+
+
+
+
+`AssetModelId`  
+The ID of the asset model\.  
+
+## AWS::IoTSiteWise::Dashboard
+
+### Ref
+
+### Fn::GetAtt
+
+
+`DashboardArn`  
+Not currently supported by AWS CloudFormation\.
+
+`DashboardId`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::IoTSiteWise::Gateway
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `GatewayId`\.
+
+### Fn::GetAtt
+
+
+
+
+`GatewayId`  
+The ID for the gateway\.  
+
+## AWS::IoTSiteWise::Portal
+
+### Ref
+
+### Fn::GetAtt
+
+
+`PortalArn`  
+Not currently supported by AWS CloudFormation\.
+
+`PortalClientId`  
+Not currently supported by AWS CloudFormation\.
+
+`PortalId`  
+Not currently supported by AWS CloudFormation\.
+
+`PortalStartUrl`  
+Not currently supported by AWS CloudFormation\.
+
+`PortalStatus`  
+Not currently supported by AWS CloudFormation\.
+
+## AWS::IoTSiteWise::Project
+
+### Ref
+
+### Fn::GetAtt
+
+
+`ProjectArn`  
+Not currently supported by AWS CloudFormation\.
+
+`ProjectId`  
+Not currently supported by AWS CloudFormation\.
 
 ## AWS::IoTThingsGraph::FlowTemplate
 
@@ -5702,6 +6218,19 @@ The Amazon Resource Name \(ARN\) of the delivery stream, such as `arn:aws:fireho
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\.
 
 
+
+## AWS::Lambda::CodeSigningConfig
+
+### Ref
+
+### Fn::GetAtt
+
+
+`CodeSigningConfigArn`  
+Not currently supported by AWS CloudFormation\.
+
+`CodeSigningConfigId`  
+Not currently supported by AWS CloudFormation\.
 
 ## AWS::Lambda::EventInvokeConfig
 
@@ -6056,6 +6585,68 @@ For example: `{ "Ref": "myInputSecurityGroup" }`
 `Arn`  
 The ARN of the MediaLive input security group\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:inputSecurityGroup:1234567
 
+## AWS::MediaPackage::Asset
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The Amazon Resource Name \(ARN\) for the asset\. You can get this from the response to any request to the asset\.
+
+`CreatedAt`  
+The time that the asset was initially submitted for ingest\.
+
+## AWS::MediaPackage::Channel
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The channel's unique system\-generated resource name, based on the AWS record\.
+
+`HlsIngest`  
+System\-generated information about the channel\.
+
+## AWS::MediaPackage::OriginEndpoint
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The endpoint's unique system\-generated resource name, based on the AWS record\.
+
+`Url`  
+URL for the key provider’s key retrieval API endpoint\. Must start with https://\.
+
+## AWS::MediaPackage::PackagingConfiguration
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The Amazon Resource Name \(ARN\) for the packaging configuration\. You can get this from the response to any request to the packaging configuration\.
+
+## AWS::MediaPackage::PackagingGroup
+
+### Ref
+
+### Fn::GetAtt
+
+
+`Arn`  
+The Amazon Resource Name \(ARN\) for the packaging group\. You can get this from the response to any request to the packaging group\.
+
+`DomainName`  
+The fully qualified domain name for the assets in the PackagingGroup\.
+
 ## AWS::MediaStore::Container
 
 ### Ref
@@ -6134,6 +6725,82 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 ### Ref
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+
+
+## AWS::NetworkFirewall::Firewall
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the firewall\. For example: 
+
+ `{ "Ref": "arn:aws:network-firewall:us-east-1:012345678901:firewall/myFirewallName" }` 
+
+
+### Fn::GetAtt
+
+
+
+
+`EndpointIds`  
+The unique IDs of the firewall endpoints for all of the subnets that you attached to the firewall\. The subnets are not listed in any particular order\. For example: `["us-west-2c:vpce-111122223333", "us-west-2a:vpce-987654321098", "us-west-2b:vpce-012345678901"]`\. 
+
+`FirewallArn`  
+The Amazon Resource Name \(ARN\) of the [AWS::NetworkFirewall::Firewall](#aws-resource-networkfirewall-firewall)\. 
+
+`FirewallId`  
+The name of the [AWS::NetworkFirewall::Firewall](#aws-resource-networkfirewall-firewall) resource\. 
+
+
+## AWS::NetworkFirewall::FirewallPolicy
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the firewall policy\. For example: 
+
+ `{ "Ref": "arn:aws:network-firewall:us-east-1:012345678901:firewall-policy/myFirewallPolicyName" }` 
+
+
+### Fn::GetAtt
+
+
+
+
+`FirewallPolicyArn`  
+The Amazon Resource Name \(ARN\) of the [AWS::NetworkFirewall::FirewallPolicy](#aws-resource-networkfirewall-firewallpolicy)\. 
+
+`FirewallPolicyId`  
+The unique ID of the [AWS::NetworkFirewall::FirewallPolicy](#aws-resource-networkfirewall-firewallpolicy) resource\. 
+
+
+## AWS::NetworkFirewall::LoggingConfiguration
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the firewall that the logging configuration is associated with\. For example: 
+
+ `{ "Ref": "arn:aws:network-firewall:us-east-1:012345678901:firewall/myFirewallName" }` 
+
+
+
+## AWS::NetworkFirewall::RuleGroup
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the rule group\. For example: 
+
+ `{ "Ref": "arn:aws:network-firewall:us-east-1:012345678901:stateful-rulegroup/myStatefulRuleGroupName" }` 
+
+
+### Fn::GetAtt
+
+
+
+
+`RuleGroupArn`  
+The Amazon Resource Name \(ARN\) of the [AWS::NetworkFirewall::RuleGroup](#aws-resource-networkfirewall-rulegroup)\. 
+
+`RuleGroupId`  
+The unique ID of the [AWS::NetworkFirewall::RuleGroup](#aws-resource-networkfirewall-rulegroup) resource\. 
 
 
 ## AWS::NetworkManager::CustomerGatewayAssociation
@@ -6655,7 +7322,7 @@ The Amazon Resource Name \(ARN\) of the resource share\.
 
 ### Ref
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster as an uppercase string\.
 
 
 ### Fn::GetAtt
@@ -6664,13 +7331,13 @@ The Amazon Resource Name \(ARN\) of the resource share\.
 
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
-The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-123456789012.us-east-2.rds.amazonaws.com` 
 
 `Endpoint.Port`  <a name="Endpoint.Port-fn::getatt"></a>
 The port number that will accept connections on this DB cluster\. For example: `3306` 
 
 `ReadEndpoint.Address`  <a name="ReadEndpoint.Address-fn::getatt"></a>
-The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-123456789012.us-east-2.rds.amazonaws.com` 
 
 
 ## AWS::RDS::DBClusterParameterGroup
@@ -6766,6 +7433,14 @@ The Amazon Resource Name \(ARN\) representing the target group\.
 ### Ref
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the RDS event subscription\.
+
+
+
+## AWS::RDS::GlobalCluster
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the global database cluster\.
 
 
 
@@ -6952,6 +7627,9 @@ Not currently supported by AWS CloudFormation\.
 
 
 
+
+`Id`  
+Not currently supported by AWS CloudFormation\.
 
 `NameServers`  
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  
@@ -7185,6 +7863,18 @@ Example \(IPv4\): `http://DOC-EXAMPLE-BUCKET.s3-website.us-east-2.amazonaws.com`
 Example \(IPv6\): `http://DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com` 
 
 
+## AWS::S3::StorageLens
+
+### Ref
+
+
+### Fn::GetAtt
+
+
+
+`StorageLensArn`  
+This resource contains the details of the S3 Storage Lens ARN\. This resource is read\-only\.
+
 ## AWS::SDB::Domain
 
 ### Ref
@@ -7199,6 +7889,16 @@ Example \(IPv6\): `http://DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.co
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 
+
+## AWS::SES::ContactList
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the resource name\. For example:
+
+`{ "Ref" : "ContactListName" }`
+
+For the Amazon SES ContactList, `Ref` returns the name of the contact list\.
 
 ## AWS::SES::ReceiptRule
 
@@ -7360,11 +8060,17 @@ The permission set ARN of the permission set, such as `arn:aws:sso:::permissionS
 
 ### Ref
 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the code repository\.
+
+
 ### Fn::GetAtt
 
 
+
+
+
 `CodeRepositoryName`  
-Not currently supported by AWS CloudFormation\.
+The name of the code repository, such as `myCodeRepo`\.
 
 ## AWS::SageMaker::Endpoint
 
@@ -7836,6 +8542,36 @@ The ID of the canary\.
 The state of the canary\. For example, `RUNNING`\.
 
 
+## AWS::Timestream::Database
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the database name `DATABASE_NAME`\.
+
+
+### Fn::GetAtt
+
+The `Fn::GetAtt` returns a value for the specified attribute of this type\. The following are the available attributes:
+
+
+`Arn`  
+The `arn` of the database\.
+
+## AWS::Timestream::Table
+
+### Ref
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
+
+
+### Fn::GetAtt
+
+The `Fn::GetAtt` returns a value for the specified attribute of this type\. The following are the available attributes:
+
+
+`Arn`  
+The `arn` of the table\.
+
 ## AWS::Transfer::Server
 
 ### Ref
@@ -8100,6 +8836,28 @@ The ID of the web ACL\.
 The `Ref` for the resource, containing the resource name, physical ID, and scope, formatted as follows: `name|id|scope`\.
 
 For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
+
+
+## AWS::WorkSpaces::ConnectionAlias
+
+### Ref
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+
+
+### Fn::GetAtt
+
+
+
+
+`AliasId`  
+The identifier of the connection alias, returned as a string\.
+
+`Associations`  
+The association status of the connection alias, returned as an array of `ConnectionAliasAssociation` objects\.
+
+`ConnectionAliasState`  
+The current state of the connection alias, returned as a string\.
 
 
 ## AWS::WorkSpaces::Workspace

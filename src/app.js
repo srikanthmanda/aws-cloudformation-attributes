@@ -11,6 +11,7 @@ async function main() {
     console.error(
       "Archive download failed. Exception: " + JSON.stringify(error)
     );
+    throw error;
   }
 
   try {
@@ -20,6 +21,7 @@ async function main() {
     console.error(
       "Archive extraction failed. Exception: " + JSON.stringify(error)
     );
+    throw error;
   }
 
   try {
@@ -29,6 +31,7 @@ async function main() {
     console.error(
       "Attribute files creation failed. Exception: " + JSON.stringify(error)
     );
+    throw error;
   }
 
   try {
@@ -41,7 +44,10 @@ async function main() {
     console.error(
       "Cheatsheet creation failed. Exception: " + JSON.stringify(error)
     );
+    throw error;
   }
 }
 
-main();
+main()
+  .then(() => console.log("Script completed successfully."))
+  .catch(() => console.log("Script failed."));

@@ -8,7 +8,7 @@ async function getRepoArchive() {
       owner: "awsdocs",
       repo: "aws-cloudformation-user-guide",
       archive_format: "zipball",
-      ref: "master",
+      ref: "main",
     }
   );
   console.debug("repoArchiveURL: " + JSON.stringify(repoArchive));
