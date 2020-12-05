@@ -1,53 +1,53 @@
-const gra = require("./get-awsdocs-repo");
-const ef = require("./extract-zip");
-const caf = require("./create-attributes-file");
-const ccs = require("./create-cheatsheet");
+const gra = require('./get-awsdocs-repo');
+const ef = require('./extract-zip');
+const caf = require('./create-attributes-file');
+const ccs = require('./create-cheatsheet');
 
 async function main() {
   try {
     await gra.getRepoArchive();
-    console.log("Archive downloaded.");
+    console.log('Archive downloaded.');
   } catch (error) {
     console.error(
-      "Archive download failed. Exception: " + JSON.stringify(error)
+      `Archive download failed. Exception: ${JSON.stringify(error)}`,
     );
     throw error;
   }
 
   try {
-    await ef.extractEntityFiles("aws-cloudformation-user-guide.zip", "data");
-    console.log("Archive extracted.");
+    await ef.extractEntityFiles('aws-cloudformation-user-guide.zip', 'data');
+    console.log('Archive extracted.');
   } catch (error) {
     console.error(
-      "Archive extraction failed. Exception: " + JSON.stringify(error)
+      `Archive extraction failed. Exception: ${JSON.stringify(error)}`,
     );
     throw error;
   }
 
   try {
-    await caf.createAttributeFiles("data", "output");
-    console.log("Attribute files created.");
+    await caf.createAttributeFiles('data', 'output');
+    console.log('Attribute files created.');
   } catch (error) {
     console.error(
-      "Attribute files creation failed. Exception: " + JSON.stringify(error)
+      `Attribute files creation failed. Exception: ${JSON.stringify(error)}`,
     );
     throw error;
   }
 
   try {
     await ccs.createCheatsheet(
-      "output/aws_cloudformation_attributes_index.csv",
-      "docs/index.md"
+      'output/aws_cloudformation_attributes_index.csv',
+      'docs/index.md',
     );
-    console.log("Cheatsheet created.");
+    console.log('Cheatsheet created.');
   } catch (error) {
     console.error(
-      "Cheatsheet creation failed. Exception: " + JSON.stringify(error)
+      `Cheatsheet creation failed. Exception: ${JSON.stringify(error)}`,
     );
     throw error;
   }
 }
 
 main()
-  .then(() => console.log("Script completed successfully."))
-  .catch(() => console.log("Script failed."));
+  .then(() => console.log('Script completed successfully.'))
+  .catch(() => console.log('Script failed.'));
