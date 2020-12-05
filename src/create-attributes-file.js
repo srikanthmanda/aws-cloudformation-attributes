@@ -28,7 +28,7 @@ async function createAttributesFile(input, outputDir, indexFile) {
   let entity;
 
   for await (const line of rl) {
-    linesRead++;
+    linesRead += 1;
     if (!inReturnValuesSection && line.startsWith(PAGE_START)) {
       entity = line.split('<', 1)[0];
     } else if (line.startsWith(RETURN_VALUES_SECTION_START)) {

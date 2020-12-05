@@ -27,12 +27,12 @@ function extractEntityFiles(repoArchive, dataDir) {
             RESOURCE_FILE_NAME_REGEX.test(fileEntry)
             || PROPERTIES_FILE_NAME_REGEX.test(fileEntry)
           ) {
-            numOfEntityFiles++;
+            numOfEntityFiles += 1;
             const unzippedFile = fs.createWriteStream(
               `${dataDir}/${fileEntry}`,
             );
-            repoZip.openReadStream(entry, (err, readStream) => {
-              if (err) throw err;
+            repoZip.openReadStream(entry, (errOpenReadStream, readStream) => {
+              if (errOpenReadStream) throw errOpenReadStream;
               readStream.on('end', () => {
                 repoZip.readEntry();
               });

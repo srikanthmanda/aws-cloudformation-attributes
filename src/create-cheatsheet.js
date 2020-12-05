@@ -35,9 +35,11 @@ async function createCheatsheet(indexFile, cheatSheet) {
     '# AWS CloudFormation Attributes\n\n## Table of Contents\n',
   );
 
-  for (const api of Object.keys(dataMap).sort()) {
+  // for (const api of Object.keys(dataMap).sort()) {
+  Object.keys(dataMap).sort().forEach((api) => {
     fs.appendFileSync(cheatSheet, `\n### AWS::${api}\n`);
-    for (const entity of Object.keys(dataMap[api]).sort()) {
+    // for (const entity of Object.keys(dataMap[api]).sort()) {
+    Object.keys(dataMap[api]).sort().forEach((entity) => {
       fs.appendFileSync(
         cheatSheetBody,
         `\n#${fs.readFileSync(dataMap[api][entity])}`,
@@ -52,8 +54,8 @@ async function createCheatsheet(indexFile, cheatSheet) {
           (api + entity).toLowerCase()
         })\n`,
       );
-    }
-  }
+    });
+  });
 
   fs.appendFileSync(cheatSheet, fs.readFileSync(cheatSheetBody));
   fs.appendFileSync(cheatSheet, FOOTER);
